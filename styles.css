@@ -101,14 +101,14 @@ h1,h2,h3,.title,.paper h1,.event h3{font-family:'Cormorant Garamond',Georgia,ser
 
 
 /* Approved Grand Crossing: responsive hero framing and readable gallery presentation */
-.gothic-hero{background-image:linear-gradient(90deg,rgba(8,12,15,.89) 0%,rgba(8,12,15,.54) 55%,rgba(8,12,15,.69) 100%),linear-gradient(0deg,#0c1012 0%,transparent 35%),url("assets/images/the-grand-crossing.png")!important;background-size:cover!important;background-position:center 47%!important}
+.gothic-hero{background-image:linear-gradient(90deg,rgba(8,12,15,.89) 0%,rgba(8,12,15,.54) 55%,rgba(8,12,15,.69) 100%),linear-gradient(0deg,#0c1012 0%,transparent 35%),linear-gradient(145deg,#17252b,#10191e)!important;background-size:cover!important;background-position:center 47%!important}
 .gothic-hero .hero-engraving{opacity:.25}
 .gothic-hero .hero-content{text-shadow:0 2px 22px #000c}
 .gothic-hero .hero-content>p:not(.hero-footnote){color:#f1e9db}
 .approved-art{margin:0;position:relative;background:#171e22;border:1px solid #b99b6970;padding:8px;box-shadow:0 24px 55px #0005}
 .approved-art img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .approved-art figcaption{color:#d9c7a9;font:11px/1.65 system-ui,sans-serif;letter-spacing:.035em;padding:12px 8px 6px}
-@media(max-width:700px){.gothic-hero{background-position:54% center!important;background-image:linear-gradient(90deg,rgba(8,12,15,.78),rgba(8,12,15,.67)),linear-gradient(0deg,#0c1012,transparent 35%),url("assets/images/the-grand-crossing.png")!important}.gothic-hero .hero-engraving{opacity:.12}}
+@media(max-width:700px){.gothic-hero{background-position:54% center!important;background-image:linear-gradient(90deg,rgba(8,12,15,.78),rgba(8,12,15,.67)),linear-gradient(0deg,#0c1012,transparent 35%),linear-gradient(145deg,#17252b,#10191e)!important}.gothic-hero .hero-engraving{opacity:.12}}
 
 /* Preview: illustrated reading journey */
 .hero-line{font:normal clamp(24px,3vw,38px)/1.2 'Cormorant Garamond',Georgia,serif;color:#e2cead;margin:10px auto 18px;max-width:800px}
@@ -139,3 +139,17 @@ h1,h2,h3,.title,.paper h1,.event h3{font-family:'Cormorant Garamond',Georgia,ser
 .story-portrait{margin:28px 0 34px}
 .story-portrait img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:center}
 @media(max-width:560px){.story-portrait img{aspect-ratio:4/3;object-position:37% center}}
+
+/* Unified illustrated-journal entry */
+.single-opening{padding-top:clamp(40px,8vw,95px);padding-bottom:clamp(48px,7vw,90px);text-align:center;scroll-margin-top:90px}
+.single-opening>.kicker{letter-spacing:.25em}.single-opening h1{font:400 clamp(54px,9vw,118px)/1.02 'Cinzel',Georgia,serif;letter-spacing:-.035em;margin:20px auto 12px;max-width:1060px}
+.opening-line{font:italic clamp(23px,3vw,40px)/1.2 'Cormorant Garamond',Georgia,serif;color:#d8c8ac;margin:0 auto 38px}
+.grand-journal-art{max-width:1280px;margin:0 auto 32px}.grand-journal-art img{width:100%;height:auto;display:block;object-fit:contain;filter:drop-shadow(0 16px 28px #0007)}
+.grand-journal-art figcaption{color:#cdb38b;font:12px/1.5 system-ui;margin-top:12px}
+.opening-copy{color:#ded5c7;font-size:clamp(17px,2vw,22px);line-height:1.8;max-width:760px;margin:20px auto 30px}
+.single-opening .actions{justify-content:center}.single-opening .hero-footnote{font-size:12px;letter-spacing:.1em;color:#aaa8a1;margin-top:22px}
+.journey-intro{padding-top:40px;padding-bottom:65px;scroll-margin-top:85px}.journey-chapter{scroll-margin-top:85px}.journey-outro{text-align:center;scroll-margin-top:90px}
+.journey-outro>p{font-size:19px;color:var(--muted);max-width:690px;margin:10px auto 25px}.journey-outro .actions{justify-content:center}
+.journey-ending .story-portrait{margin:32px auto;max-width:950px}.journey-ending .story-portrait img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
+.journey-ending{border-top:1px solid #b99b6933}.journey-ending .actions{margin-top:26px}
+@media(max-width:600px){.single-opening{padding-top:35px}.single-opening h1{font-size:clamp(40px,11vw,70px)}.opening-line{font-size:25px}.opening-copy{font-size:17px}.grand-journal-art{margin-left:-9px;margin-right:-9px}.journey-ending .story-portrait img{aspect-ratio:4/3;object-position:32% center}}
