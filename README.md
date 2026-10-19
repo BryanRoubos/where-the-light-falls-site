@@ -4,10 +4,10 @@ A static, spoiler-safe website introducing the dark fantasy novel **Where the Li
 
 ## Branch and publication rules
 
-- **Editing branch:** `preview/illustrated-journey` — development and review only. Do not deploy or merge to the public Pages branch without explicit creator approval.
-- **Public Pages branch:** separate from this preview; do not modify it as part of routine cleanup.
+- **Editing branch:** `preview/illustrated-journey`. A push to this branch triggered the repository's Pages build/deployment workflow at commit `c08b65d`; its name does not guarantee an isolated preview.
+- **Deployment control:** Treat pushes to the editing branch as potentially publishing. Obtain explicit approval before pushing or changing deployment settings; confirm the current Pages source and deployment result rather than assuming a separate public branch. Do not change `main` during routine cleanup.
 - **Private canon source:** `BryanRoubos/where-the-light-falls-author/canon-v2/`. The website is a curated *public* presentation, not an automatic canon export.
-- **Spoiler boundary:** keep Mira's undisclosed fate, the Registrar's signature revelation, Elias's covert assignment, detention/transfer mechanics, and ending details off public routes, source comments, HTML, and metadata. Any text committed here is effectively public, even if it is not linked in the UI.
+- **Spoiler boundary:** keep unpublished character outcomes, surprise revelations, private assignments, investigative mechanics and ending details out of this repository, including routes, source comments, HTML and metadata. Any committed text is effectively public even if not linked in the UI. Consult the private author files for the specific spoiler review; do not reproduce their contents here.
 - **Canon boundary:** distinguish established facts from speculative illustration details. No unapproved character biographies, emblems, exact maps or invented scene dialogue.
 - **Image approval:** use only artwork explicitly approved for public display. Use each illustration once in the reading journey; the full-size viewer may show the opened illustration. Do not delete unused studies or concept art without approval.
 
@@ -21,7 +21,7 @@ A static, spoiler-safe website introducing the dark fantasy novel **Where the Li
 | `editorial.css` | Novel-first page hierarchy and supporting cast styling |
 | `mobile.css` | Final responsive overrides for phones and tablets |
 | `assets/images/` | Approved hero image and retained reference render |
-| Root PNG files | Approved displayed illustrations and **retained unused** concept studies (see below) |
+| Root PNG files | Currently displayed illustrations and **retained unused** concepts; display alone does not establish approval (see below) |
 
 **CSS cascade order is important:** `styles.css` → `editorial.css` → `mobile.css`. Preserve this order until the older CSS rules are deliberately consolidated with visual regression testing.
 
@@ -29,9 +29,9 @@ A static, spoiler-safe website introducing the dark fantasy novel **Where the Li
 
 **Retained but hidden:** `Lanterns Over the Mistbound Harbour.png` — exploratory River Captain portrait; not displayed in the website until the artwork and character appearance are approved. Its detailed visual-development record remains private, and depicted traits are not automatically canon.
 
-**Currently used:** `assets/images/the-grand-crossing.png` (hero); `Candlelit Medieval Stone Hideout.png`; `Middle Level.png`; `Elias Above the Misty Cliff City.png`; `Mira Overlooking the Lanternlit Canyon City.png`; `Lower Level.png`; `Upper Level.png`; `Where the Light Falls_ Gothic Cityscape.png`.
+**Currently used:** `assets/images/the-grand-crossing.png` (hero); `Candlelit Medieval Stone Hideout.png`; `assets/images/districts/middle-heights-concept-07.png`; `Elias Above the Misty Cliff City.png`; `Mira Overlooking the Lanternlit Canyon City.png`; `assets/images/districts/deepwater-concept-07.png`; `assets/images/districts/upper-heights-concept-07.png`; `Where the Light Falls_ Gothic Cityscape.png`.
 
-**District artwork selected for website integration (19 October 2026):** `Lower Level.png` (Deepwater), `Middle Level.png` (Middle Heights), and `Upper Level.png` (Upper Heights), imported byte-for-byte from creator uploads on main at `2b17b5700712a9a8d196a75ab17490c39e71e662`. These replace the displayed district images; they do not establish exact maps, emblems or incidental building details. Original district images remain retained. Development and publication controls above still apply.
+**District artwork approved for website integration (19 October 2026):** The creator explicitly requested upload and website replacement with the three iteration 07 illustrations: `assets/images/districts/deepwater-concept-07.png`, `assets/images/districts/middle-heights-concept-07.png` and `assets/images/districts/upper-heights-concept-07.png`. Each is a native 1672 × 941 PNG, displayed at its natural aspect ratio without cropping or stretching. Previous `Lower Level.png`, `Middle Level.png` and `Upper Level.png` remain retained but are no longer displayed. Approval applies to these images for public concept-art use; incidental architecture, props and routes do not become written canon. A repository push and a successful Pages deployment are separate operational facts.
 
 **Retained but not referenced by the reading journey:** `Cliffside City in Golden Mist.png`, `Misty Harbor Market Beneath Cliffside Bridges.png`, `The Grand Gate Market District.png`, `Elias Clothing Concept Board.png`, `Graphite Character Study Sheet.png`, `Graphite Portrait Studies on Aged Paper.png`, `Graphite Portrait Studies on Textured Paper.png`, `Graphite Portrait Study Sheet.png`, `Rugged Adventurer Outfit Sketch.png`, `Where the Light Falls_ City of Bridges.png`, and `assets/images/parchment-grand-crossing.png`. Do not assume these are approved for publication. Relocation or removal requires an explicit asset decision.
 
@@ -46,7 +46,7 @@ Before approving a release:
 3. Test in-page `#read-...` navigation from a fresh load and when already on another route. The sticky header must not obscure headings.
 4. Check all links, the full-page reading order, illustration single-use placement and WCAG AA text contrast.
 5. Inspect the diff for private plot spoilers, invented canon, unapproved imagery or misleading publication status.
-6. Review social previews against the *actual deployed URL*: the preview branch's files are not automatically live.
+6. Review social previews against the *actual deployed URL* and successful deployment commit. A branch push may trigger Pages, but a queued job or repository upload does not confirm that it is live.
 
 ## Maintenance guidelines
 
