@@ -82,3 +82,8 @@ h1,h2,h3,.title,.journey-copy h2,.journey-ending h2,.journey-outro h2,.page-head
 .supporting-card span{font:15px/1.4 'Cinzel',Georgia,serif;color:#f1d5a3;margin-top:auto}
 @media(max-width:760px){.supporting-cast-grid{grid-template-columns:1fr}.supporting-card{min-height:0;padding:23px}.supporting-cast{padding-top:48px;padding-bottom:60px}}
 
+
+/* Single exploratory River Captain portrait in the supporting-cast preview */
+.supporting-card-illustrated{padding-top:17px}
+.supporting-card-illustrated>img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 32%;border-radius:2px;border:1px solid #d2bb9038;margin:0 0 8px}
+@media(max-width:760px){.supporting-card-illustrated>img{aspect-ratio:5/4;object-position:center 32%}}
