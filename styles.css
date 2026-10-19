@@ -134,3 +134,8 @@ h1,h2,h3,.title,.paper h1,.event h3{font-family:'Cormorant Garamond',Georgia,ser
 @media(max-width:850px){.journey-chapter,.journey-chapter.reverse{grid-template-columns:1fr;gap:24px;padding-top:50px;padding-bottom:58px}.journey-chapter.reverse .journey-art{order:0}.journey-copy h2{font-size:clamp(38px,8vw,60px)}.world-paths{grid-template-columns:1fr}.hero-line{font-size:27px}}
 @media(max-width:560px){.journey-index{flex-direction:column}.journey-chapter{padding-left:16px;padding-right:16px}.journey-copy p,.journey-ending p{font-size:16px}.story-links{grid-template-columns:1fr}.journey-art img{aspect-ratio:4/3}.journey-ending{padding-top:48px;padding-bottom:55px}}
 @media(prefers-reduced-motion:reduce){.journey-chapter{scroll-behavior:auto}}
+
+/* Elias character illustration — single Story placement */
+.story-portrait{margin:28px 0 34px}
+.story-portrait img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:center}
+@media(max-width:560px){.story-portrait img{aspect-ratio:4/3;object-position:37% center}}
