@@ -242,3 +242,11 @@ h1,h2,h3,.title,.journey-copy h2,.journey-ending h2,.journey-outro h2,.page-head
 
 /* Single-use shelter artwork in its lore entry */
 .lore-art{max-width:1030px;margin:18px auto 28px}.lore-art img{display:block;width:100%;height:auto;border-radius:5px}.lore-art figcaption{margin-top:10px;color:#c7bda8;font-size:14px;text-align:center}.shelter-teaser{margin:20px auto;max-width:62ch}.shelter-teaser a{white-space:normal}
+
+/* Continuous, novel-like chapters for existing public-safe lore */
+#read-origins,#read-society,#read-power,#read-everyday,#read-shelter{max-width:900px;scroll-margin-top:88px;padding-top:80px;padding-bottom:80px;border-top:1px solid #cdb38b35}
+#read-origins h2,#read-society h2,#read-power h2,#read-everyday h2,#read-shelter h2{font-family:var(--font-chapter);font-weight:500;font-size:clamp(38px,5vw,62px);line-height:1.12;max-width:19ch;text-wrap:balance}
+#read-origins p,#read-society p,#read-power p,#read-everyday p,#read-shelter p{font:clamp(19px,2vw,22px)/1.68 var(--font-reading);max-width:65ch}
+#read-shelter .lore-art{max-width:100%;margin:30px 0}#read-shelter .lore-art img{width:100%;height:auto;display:block}
+.journey-index{display:flex;flex-wrap:wrap;gap:10px 18px;justify-content:center}.journey-index a{font-size:17px}
+@media(max-width:690px){#read-origins,#read-society,#read-power,#read-everyday,#read-shelter{padding-top:55px;padding-bottom:55px}}
