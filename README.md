@@ -29,9 +29,11 @@ A static, spoiler-safe website introducing the dark fantasy novel **Where the Li
 
 **Retained but hidden:** `Lanterns Over the Mistbound Harbour.png` — exploratory River Captain portrait; not displayed in the website until the artwork and character appearance are approved. Its detailed visual-development record remains private, and depicted traits are not automatically canon.
 
-**Currently used:** `assets/images/the-grand-crossing.png` (hero); `Candlelit Medieval Stone Hideout.png`; `Cliffside City in Golden Mist.png`; `Elias Above the Misty Cliff City.png`; `Mira Overlooking the Lanternlit Canyon City.png`; `Misty Harbor Market Beneath Cliffside Bridges.png`; `The Grand Gate Market District.png`; `Where the Light Falls_ Gothic Cityscape.png`.
+**Currently used:** `assets/images/the-grand-crossing.png` (hero); `Candlelit Medieval Stone Hideout.png`; `Middle Level.png`; `Elias Above the Misty Cliff City.png`; `Mira Overlooking the Lanternlit Canyon City.png`; `Lower Level.png`; `Upper Level.png`; `Where the Light Falls_ Gothic Cityscape.png`.
 
-**Retained but not referenced by the reading journey:** `Elias Clothing Concept Board.png`, `Graphite Character Study Sheet.png`, `Graphite Portrait Studies on Aged Paper.png`, `Graphite Portrait Studies on Textured Paper.png`, `Graphite Portrait Study Sheet.png`, `Rugged Adventurer Outfit Sketch.png`, `Where the Light Falls_ City of Bridges.png`, and `assets/images/parchment-grand-crossing.png`. Do not assume these are approved for publication. Relocation or removal requires an explicit asset decision.
+**District artwork selected for website integration (19 October 2026):** `Lower Level.png` (Deepwater), `Middle Level.png` (Middle Heights), and `Upper Level.png` (Upper Heights), imported byte-for-byte from creator uploads on main at `2b17b5700712a9a8d196a75ab17490c39e71e662`. These replace the displayed district images; they do not establish exact maps, emblems or incidental building details. Original district images remain retained. Development and publication controls above still apply.
+
+**Retained but not referenced by the reading journey:** `Cliffside City in Golden Mist.png`, `Misty Harbor Market Beneath Cliffside Bridges.png`, `The Grand Gate Market District.png`, `Elias Clothing Concept Board.png`, `Graphite Character Study Sheet.png`, `Graphite Portrait Studies on Aged Paper.png`, `Graphite Portrait Studies on Textured Paper.png`, `Graphite Portrait Study Sheet.png`, `Rugged Adventurer Outfit Sketch.png`, `Where the Light Falls_ City of Bridges.png`, and `assets/images/parchment-grand-crossing.png`. Do not assume these are approved for publication. Relocation or removal requires an explicit asset decision.
 
 ## Local testing
 

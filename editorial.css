@@ -70,6 +70,7 @@ h1,h2,h3,.title,.journey-copy h2,.journey-ending h2,.journey-outro h2,.page-head
 @media(max-width:700px){#read-people .sibling-portraits img{aspect-ratio:3/2}.lore-passage,.lore-passage:nth-of-type(even){padding:48px 22px!important}}
 
 /* Supporting cast: text-first until individual character artwork is approved */
+.journey-chapter .journey-art img{aspect-ratio:auto;height:auto;object-fit:contain}
 .supporting-cast{padding-top:70px;padding-bottom:88px;max-width:1120px;scroll-margin-top:95px;border-top:1px solid #cdb38b35}
 .supporting-cast h2{font-family:var(--font-chapter);font-size:clamp(37px,4.6vw,58px);font-weight:500;line-height:1.16;margin:15px 0 19px}
 .supporting-cast>p{font-family:var(--font-reading);font-size:clamp(19px,2vw,22px);max-width:64ch;line-height:1.6;color:#e7e2da}
