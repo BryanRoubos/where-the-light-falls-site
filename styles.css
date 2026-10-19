@@ -153,3 +153,9 @@ h1,h2,h3,.title,.paper h1,.event h3{font-family:'Cormorant Garamond',Georgia,ser
 .journey-ending .story-portrait{margin:32px auto;max-width:950px}.journey-ending .story-portrait img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover}
 .journey-ending{border-top:1px solid #b99b6933}.journey-ending .actions{margin-top:26px}
 @media(max-width:600px){.single-opening{padding-top:35px}.single-opening h1{font-size:clamp(40px,11vw,70px)}.opening-line{font-size:25px}.opening-copy{font-size:17px}.grand-journal-art{margin-left:-9px;margin-right:-9px}.journey-ending .story-portrait img{aspect-ratio:4/3;object-position:32% center}}
+
+/* Original painterly Grand Crossing hero restored, with title on top */
+.original-hero{position:relative;isolation:isolate;display:flex;align-items:center;justify-content:center;min-height:clamp(650px,90vh,920px);padding:90px 24px!important;background-image:linear-gradient(90deg,rgba(8,12,15,.82),rgba(8,12,15,.47) 50%,rgba(8,12,15,.78)),linear-gradient(0deg,#0c1012 0%,transparent 34%),url("assets/images/the-grand-crossing.png");background-size:cover;background-position:center 47%;border-bottom:1px solid #b99b6940}
+.original-hero .opening-content{position:relative;z-index:1;width:100%;max-width:1000px;text-shadow:0 3px 24px #000c}
+.original-hero .opening-line{color:#eddfc7}.original-hero .opening-copy{color:#f2eade}.original-hero .kicker{color:#ead2a8}
+@media(max-width:650px){.original-hero{min-height:clamp(680px,95svh,880px);background-position:54% center;background-image:linear-gradient(90deg,rgba(8,12,15,.81),rgba(8,12,15,.66)),linear-gradient(0deg,#0c1012,transparent 32%),url("assets/images/the-grand-crossing.png")}}
