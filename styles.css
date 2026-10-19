@@ -217,3 +217,9 @@ h1,h2,h3,.title,.journey-copy h2,.journey-ending h2,.journey-outro h2,.page-head
 .paper p,.article-shell p{font-size:clamp(18px,1.8vw,21px)}
 @media(max-width:740px){.journey-chapter{content-visibility:visible}.original-hero{min-height:740px}.original-hero .opening-copy{font-size:19px}.journey-intro>p{font-size:19px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Transparent illustration process note */
+.art-process{margin:70px auto 32px;max-width:660px;padding:24px 26px;border-top:1px solid #cdb38b73;border-bottom:1px solid #cdb38b42;text-align:center}
+.art-process h3{font-family:var(--font-chapter,Georgia,serif);font-size:clamp(26px,3.4vw,38px);margin:0 0 10px}
+.art-process p{color:#d7ccba;font-size:clamp(17px,1.8vw,20px);line-height:1.65;margin:0}
+.footer{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}.footer-art{font:13px/1.5 system-ui,sans-serif;color:#baad96}
