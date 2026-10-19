@@ -30,7 +30,7 @@ A static, spoiler-safe website introducing the dark fantasy novel **Where the Li
 
 **Retained but hidden:** `Lanterns Over the Mistbound Harbour.png` — exploratory River Captain portrait; not displayed in the website until the artwork and character appearance are approved. Its detailed visual-development record remains private, and depicted traits are not automatically canon.
 
-**Currently used:** `assets/images/the-grand-crossing.png` (hero); `Candlelit Medieval Stone Hideout.png`; `assets/images/districts/middle-heights-concept-07.png`; `Elias Above the Misty Cliff City.png`; `Mira Overlooking the Lanternlit Canyon City.png`; `assets/images/districts/deepwater-concept-07.png`; `assets/images/districts/upper-heights-concept-07.png`; `Where the Light Falls_ Gothic Cityscape.png`.
+**Currently used:** `assets/images/upper-city-gate-concept-01.png` (Upper City access article); `assets/images/the-grand-crossing.png` (hero); `Candlelit Medieval Stone Hideout.png`; `assets/images/districts/middle-heights-concept-07.png`; `Elias Above the Misty Cliff City.png`; `Mira Overlooking the Lanternlit Canyon City.png`; `assets/images/districts/deepwater-concept-07.png`; `assets/images/districts/upper-heights-concept-07.png`; `Where the Light Falls_ Gothic Cityscape.png`.
 
 **District artwork approved for website integration (19 October 2026):** The creator explicitly requested upload and website replacement with the three iteration 07 illustrations: `assets/images/districts/deepwater-concept-07.png`, `assets/images/districts/middle-heights-concept-07.png` and `assets/images/districts/upper-heights-concept-07.png`. Each is a native 1672 × 941 PNG, displayed at its natural aspect ratio without cropping or stretching. Previous `Lower Level.png`, `Middle Level.png` and `Upper Level.png` remain retained but are no longer displayed. Approval applies to these images for public concept-art use; incidental architecture, props and routes do not become written canon. A repository push and a successful Pages deployment are separate operational facts.
 
@@ -67,3 +67,5 @@ Before approving a release:
 ## Reader experience
 
 Lead with the search premise and development status. Offer story, people and city paths; reveal background lore through native expandable sections. The level selector links each district to its existing illustration and lore record, without presenting a surveyed map. Related-entry cards explain what readers will find next. Keep every interactive control usable by keyboard and honor reduced-motion preferences. No signup, excerpt or purchase action is presented until a real destination exists.
+
+**Upper City entrance concept:** Creator-approved for the access article on 19 October 2026. The wider Upper Heights district image remains in the main journey. Both refer to the same authorized entrance. Exact architecture, routes and banner designs remain interpretations. Native 1672 × 941 PNG; original source retained.
