@@ -27,7 +27,7 @@ A static, spoiler-safe website introducing the dark fantasy novel **Where the Li
 
 ## Artwork inventory
 
-**Newly referenced in preview:** `Lanterns Over the Mistbound Harbour.png` — River Captain exploratory portrait shown on the supporting-cast card and lore profile; detailed private image record lives in `where-the-light-falls-author/canon-v2/proposals/illustration-registry.md`. Its depicted skin, hair, costume and props are **not automatically canon**.
+**Retained but hidden:** `Lanterns Over the Mistbound Harbour.png` — exploratory River Captain portrait; not displayed in the website until the artwork and character appearance are approved. Its detailed visual-development record remains private, and depicted traits are not automatically canon.
 
 **Currently used:** `assets/images/the-grand-crossing.png` (hero); `Candlelit Medieval Stone Hideout.png`; `Cliffside City in Golden Mist.png`; `Elias Above the Misty Cliff City.png`; `Mira Overlooking the Lanternlit Canyon City.png`; `Misty Harbor Market Beneath Cliffside Bridges.png`; `The Grand Gate Market District.png`; `Where the Light Falls_ Gothic Cityscape.png`.
 
