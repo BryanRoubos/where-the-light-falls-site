@@ -180,3 +180,17 @@ h1,h2,h3,.title,.paper h1,.event h3{font-family:'Cormorant Garamond',Georgia,ser
 
 /* A single evocative brand reveal, without repeating the logo in the opening hero */
 .world-logo-art{width:min(100%,1020px);margin:18px auto 28px;padding:0}.world-logo-art img{display:block;width:100%;height:auto;object-fit:contain;border:0}.journey-outro{padding-top:88px;padding-bottom:100px}.journey-outro .world-logo-art+ h2{margin-top:12px}.journey-outro>p{max-width:680px}.world-logo-art img{filter:drop-shadow(0 8px 30px #0008)}
+
+/* Dark-fantasy book typography: ornate gold titles, readable literary chapters.
+   The generated logo is artwork; Cinzel Decorative approximates its letterforms. */
+:root{--font-display:'Cinzel Decorative','Cinzel',Georgia,serif;--font-chapter:'Cormorant Garamond',Georgia,serif;--font-reading:'EB Garamond',Georgia,serif}
+body{font-family:var(--font-reading);font-size:19px;line-height:1.72}
+.original-hero .single-opening h1,.single-opening h1{font-family:var(--font-display);font-weight:700;letter-spacing:.015em;line-height:1.16;color:#ead5ad;text-shadow:0 3px 4px #000d,0 12px 42px #000b}
+h1,h2,h3,.title,.journey-copy h2,.journey-ending h2,.journey-outro h2,.page-heading h1,.paper h1,.story-intro h2{font-family:var(--font-chapter);font-weight:600;letter-spacing:.005em}
+.journey-copy h2,.journey-ending h2,.journey-outro h2,.page-heading h1,.journey-intro h2{font-variant:normal;line-height:1.12}
+.brand{font-family:'Cinzel',Georgia,serif;font-weight:700;letter-spacing:.12em;font-size:12px}
+.nav a,.kicker,.btn,.filter,.tile small,.tile-more,.hero-footnote,.menu,.hero-view-full{font-family:'Cinzel',Georgia,serif}
+.journey-copy p,.journey-ending p,.journey-outro p,.opening-copy,.story-intro p,.paper p,.archive-section>p{font-family:var(--font-reading);font-size:clamp(19px,1.75vw,22px);line-height:1.7}
+.journey-index a{font-family:var(--font-chapter);font-size:19px}
+.paper{font-family:var(--font-reading)}.paper h1{font-family:var(--font-chapter)}
+@media(max-width:600px){.single-opening h1{font-size:clamp(38px,9vw,60px)}.journey-copy p,.journey-ending p,.journey-outro p,.opening-copy{font-size:19px}}
