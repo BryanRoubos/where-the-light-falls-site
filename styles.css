@@ -276,3 +276,21 @@ h1,h2,h3,.title,.journey-copy h2,.journey-ending h2,.journey-outro h2,.page-head
 .journey-index a{color:#e8d4b3}
 .journey-art figcaption,.lore-art figcaption{color:#dbd1c3}
 @media(max-width:720px){#read-people .sibling-portraits img{aspect-ratio:3/2}.lore-passage{border-left:0;padding-left:22px;padding-right:22px}.story-premise{padding-top:65px;padding-bottom:55px}.novel-status{font-size:11px}}
+
+/* Final story-first cleanup */
+.novel-status{font-size:clamp(14px,1.35vw,17px);font-weight:700;letter-spacing:.09em;color:#fce6ba;text-shadow:0 2px 12px #000}
+.city-intro{text-align:center;padding-top:74px;padding-bottom:50px;scroll-margin-top:90px}
+.city-intro h2{font:500 clamp(38px,5vw,60px)/1.12 var(--font-chapter);margin:12px auto;max-width:18ch}
+.city-intro p{font-size:clamp(19px,2vw,23px);color:#e9e1d5;max-width:56ch;margin:auto}
+#read-people .sibling-portraits{width:min(100%,1240px);max-width:1240px}
+#read-people{max-width:1340px}
+#read-people .sibling-portraits img{aspect-ratio:4/3}
+.lore-passage,.lore-passage:nth-of-type(even){width:min(100%,900px);max-width:900px!important;margin-left:auto;margin-right:auto;padding:70px clamp(24px,4vw,48px)!important;border-left:0;border-top:1px solid #bba47c45;background:transparent}
+.lore-passage:nth-of-type(even)>p{margin-left:0}
+.chapter-aside{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:20px 24px;margin:20px 0 25px;border-left:2px solid #d7bd8f;background:#e3cb9f09;max-width:65ch}
+.chapter-aside .aside-label{display:block;font:600 13px/1.5 'Cinzel',Georgia,serif;letter-spacing:.09em;color:#e6cfa7}
+.chapter-aside .aside-title{display:block;font:600 clamp(22px,2.5vw,29px)/1.35 var(--font-chapter);color:#f0e7db}
+.chapter-aside p{margin:0;color:#ded5c6}
+.chapter-quote{font-size:clamp(23px,2.7vw,33px);font-style:italic;color:#ecd9b9;margin:25px 0}
+#read-origins,#read-society,#read-power,#read-everyday,#read-shelter,#read-people,#read-deepwater,#read-middle,#read-upper,#read-premise,#read-more{scroll-margin-top:92px}
+@media(max-width:700px){#read-people .sibling-portraits img{aspect-ratio:3/2}.lore-passage,.lore-passage:nth-of-type(even){padding:48px 22px!important}}
