@@ -19,11 +19,12 @@ A static, spoiler-safe website introducing the dark fantasy novel **Where the Li
 | `app.js` | Hash router, public lore entries, illustrated main-page reading journey and image viewer |
 | `styles.css` | Foundation, archive and older layout styles |
 | `editorial.css` | Novel-first page hierarchy and supporting cast styling |
-| `mobile.css` | Final responsive overrides for phones and tablets |
+| `mobile.css` | Responsive overrides for phones and tablets |
+| `reader.css` | Reader paths, level selector, optional lore and related-entry cards |
 | `assets/images/` | Approved hero image and retained reference render |
 | Root PNG files | Currently displayed illustrations and **retained unused** concepts; display alone does not establish approval (see below) |
 
-**CSS cascade order is important:** `styles.css` → `editorial.css` → `mobile.css`. Preserve this order until the older CSS rules are deliberately consolidated with visual regression testing.
+**CSS cascade order is important:** `styles.css` → `editorial.css` → `mobile.css` → `reader.css`. Preserve this order until the older CSS rules are deliberately consolidated with visual regression testing.
 
 ## Artwork inventory
 
@@ -34,6 +35,12 @@ A static, spoiler-safe website introducing the dark fantasy novel **Where the Li
 **District artwork approved for website integration (19 October 2026):** The creator explicitly requested upload and website replacement with the three iteration 07 illustrations: `assets/images/districts/deepwater-concept-07.png`, `assets/images/districts/middle-heights-concept-07.png` and `assets/images/districts/upper-heights-concept-07.png`. Each is a native 1672 × 941 PNG, displayed at its natural aspect ratio without cropping or stretching. Previous `Lower Level.png`, `Middle Level.png` and `Upper Level.png` remain retained but are no longer displayed. Approval applies to these images for public concept-art use; incidental architecture, props and routes do not become written canon. A repository push and a successful Pages deployment are separate operational facts.
 
 **Retained but not referenced by the reading journey:** `Cliffside City in Golden Mist.png`, `Misty Harbor Market Beneath Cliffside Bridges.png`, `The Grand Gate Market District.png`, `Elias Clothing Concept Board.png`, `Graphite Character Study Sheet.png`, `Graphite Portrait Studies on Aged Paper.png`, `Graphite Portrait Studies on Textured Paper.png`, `Graphite Portrait Study Sheet.png`, `Rugged Adventurer Outfit Sketch.png`, `Where the Light Falls_ City of Bridges.png`, and `assets/images/parchment-grand-crossing.png`. Do not assume these are approved for publication. Relocation or removal requires an explicit asset decision.
+
+## Public lore coverage
+
+The archive contains 30 curated entries covering geography, districts, origins, institutions, citizenship, economic dependence, everyday life, supporting characters and established story foundations. The main introduction and Story page explain the search premise; the chronology distinguishes the city’s origins, Lower City growth and later upheaval. Related links, world categories and archive search expose the additional material.
+
+Public copy uses confirmed facts and clearly identifies unfinished designs or prose. It excludes major revelations, private investigative mechanics and unapproved proposals. Names, identities, engineering plans, dates and scene dialogue are not invented to fill gaps. Artwork and its approval status are unchanged by this text expansion.
 
 ## Local testing
 
@@ -56,3 +63,7 @@ Before approving a release:
 - Keep public story copy in `app.js` and private plot development in the author repository; do not mirror private Markdown here.
 - Do not add a placeholder signup or nonexistent excerpt. Every CTA must resolve to an existing route or action.
 - Update this README when file layout or publication controls change.
+
+## Reader experience
+
+Lead with the search premise and development status. Offer story, people and city paths; reveal background lore through native expandable sections. The level selector links each district to its existing illustration and lore record, without presenting a surveyed map. Related-entry cards explain what readers will find next. Keep every interactive control usable by keyboard and honor reduced-motion preferences. No signup, excerpt or purchase action is presented until a real destination exists.

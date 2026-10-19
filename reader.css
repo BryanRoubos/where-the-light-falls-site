@@ -1,0 +1,44 @@
+/* Reader entry points and optional depth. Loaded after the existing responsive rules. */
+.reader-paths,.level-explorer{padding-top:44px;padding-bottom:62px;scroll-margin-top:95px}
+.reader-paths>h2,.level-explorer>h2{font:500 clamp(34px,4.5vw,52px)/1.15 var(--font-chapter);margin:14px 0}
+.reader-paths>p,.level-explorer p{font:21px/1.6 var(--font-reading);color:#e5dfd3}
+.reader-path-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.reader-path{display:flex;flex-direction:column;padding:28px 24px;border:1px solid #bda77980;background:linear-gradient(145deg,#263239,#10191e);text-decoration:none;border-radius:4px}
+.reader-path small{font:12px/1.6 var(--font-display);color:#e3cb9f}
+.reader-path h3{font:500 32px/1.15 var(--font-chapter);margin:17px 0;color:#fff0d6}
+.reader-path p{font:20px/1.55 var(--font-reading);color:#e5dfd3;margin:0 0 24px}
+.reader-path>span{font:14px/1.5 var(--font-display);color:#f1d6a9;margin-top:auto}
+.reader-path:hover{border-color:#f1d6a9;background:#233139}
+.reader-promise{font-size:20px!important;color:#e3cb9f!important}
+#read-city{scroll-margin-top:100px}
+.level-explorer{max-width:1000px;padding-top:0}
+.level-choices{display:flex;gap:10px;flex-wrap:wrap;margin:24px 0 0}
+.level-choices button{font:14px/1.4 var(--font-display);color:#f1e8d8;background:#142129;border:1px solid #bda77980;min-height:48px;padding:13px 20px;cursor:pointer;border-radius:3px}
+.level-choices button[aria-pressed=true]{color:#132027;background:#e3cb9f;border-color:#e3cb9f}
+.level-preview{background:#1a282f;border:1px solid #bda77980;padding:26px 30px;margin-top:14px;min-height:235px;border-radius:3px}
+.level-preview h3{font:500 36px/1.2 var(--font-chapter);margin:0 0 10px;color:#fff0d6}
+.level-preview p{margin:0;max-width:63ch}
+.level-actions{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:18px}
+.level-actions .text-link{font:17px/1.5 var(--font-reading);min-height:44px}
+.level-explorer .explorer-note{font-size:16px;color:#c9c5bb;margin-top:14px}
+.lore-passage:has(.lore-disclosure){padding-top:25px!important;padding-bottom:25px!important}
+.lore-disclosure summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;list-style:none;min-height:64px}
+.lore-disclosure summary::-webkit-details-marker{display:none}
+.lore-disclosure summary h2{margin:13px 0!important;font-size:clamp(29px,4vw,42px)!important;max-width:none!important}
+.lore-disclosure summary>span{font:32px/1 Georgia,serif;color:#e3cb9f;flex:none}
+.lore-disclosure[open] summary>span{transform:rotate(45deg)}
+.lore-disclosure-body{padding-top:18px}
+.continue-reading{border-top:1px solid #7c643955;padding-top:14px;margin-top:35px}
+.related-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.related-paths a{display:flex;flex-direction:column;gap:8px;border:1px solid #7b624570;border-radius:3px;text-decoration:none;padding:16px;background:#fff4}
+.paper .related-paths strong{font:500 25px/1.15 var(--font-chapter);color:#3f3121}
+.related-paths span{font:16px/1.5 var(--font-reading);color:#443b30}
+.related-paths small{font:14px/1.5 var(--font-reading);color:#59452c;margin-top:auto;text-decoration:underline;text-underline-offset:3px}
+.related-paths a:hover{border-color:#4e3c21;background:#fff8}
+.reader-path:focus-visible,.level-choices button:focus-visible,.lore-disclosure summary:focus-visible{outline:3px solid #fff0cc;outline-offset:4px}
+.related-paths a:focus-visible{outline:3px solid #49361b;outline-offset:3px}
+.search{font-size:18px;min-height:48px}
+.filter{min-height:44px}
+.original-hero .opening-line{max-width:36ch}
+@media(max-width:800px){.reader-path-grid{grid-template-columns:1fr}.reader-path{padding:24px}.reader-path h3{font-size:30px}.reader-path p{margin-bottom:18px}.reader-paths,.level-explorer{padding-left:20px;padding-right:20px}.level-preview{padding:23px;min-height:0}.level-choices{gap:8px}.level-choices button{flex:1 1 140px}.level-actions{display:grid;gap:7px}.related-paths{grid-template-columns:1fr}.lore-disclosure summary h2{font-size:30px!important}.reader-promise{font-size:18px!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}.tile:hover,.original-hero .hero-entry .btn:hover{transform:none}}
