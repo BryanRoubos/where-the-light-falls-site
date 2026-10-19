@@ -27,6 +27,8 @@ A static, spoiler-safe website introducing the dark fantasy novel **Where the Li
 
 ## Artwork inventory
 
+**Newly referenced in preview:** `Lanterns Over the Mistbound Harbour.png` — River Captain exploratory portrait shown on the supporting-cast card and lore profile; detailed private image record lives in `where-the-light-falls-author/canon-v2/proposals/illustration-registry.md`. Its depicted skin, hair, costume and props are **not automatically canon**.
+
 **Currently used:** `assets/images/the-grand-crossing.png` (hero); `Candlelit Medieval Stone Hideout.png`; `Cliffside City in Golden Mist.png`; `Elias Above the Misty Cliff City.png`; `Mira Overlooking the Lanternlit Canyon City.png`; `Misty Harbor Market Beneath Cliffside Bridges.png`; `The Grand Gate Market District.png`; `Where the Light Falls_ Gothic Cityscape.png`.
 
 **Retained but not referenced by the reading journey:** `Elias Clothing Concept Board.png`, `Graphite Character Study Sheet.png`, `Graphite Portrait Studies on Aged Paper.png`, `Graphite Portrait Studies on Textured Paper.png`, `Graphite Portrait Study Sheet.png`, `Rugged Adventurer Outfit Sketch.png`, `Where the Light Falls_ City of Bridges.png`, and `assets/images/parchment-grand-crossing.png`. Do not assume these are approved for publication. Relocation or removal requires an explicit asset decision.
@@ -45,6 +47,8 @@ Before approving a release:
 6. Review social previews against the *actual deployed URL*: the preview branch's files are not automatically live.
 
 ## Maintenance guidelines
+
+- Keep a visual record for every newly added illustration in the private author repository: image/version, approval status, face, skin appearance, hair, clothing, materials and textures, environmental details, color and light, ideas still under consideration. Do not turn visible props into confirmed lore.
 
 - Prefer one focused, clearly named style rule over repeated overrides. Consolidate legacy selectors only after comparing screenshots at mobile and desktop widths.
 - Keep public story copy in `app.js` and private plot development in the author repository; do not mirror private Markdown here.
