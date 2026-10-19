@@ -194,3 +194,10 @@ h1,h2,h3,.title,.journey-copy h2,.journey-ending h2,.journey-outro h2,.page-head
 .journey-index a{font-family:var(--font-chapter);font-size:19px}
 .paper{font-family:var(--font-reading)}.paper h1{font-family:var(--font-chapter)}
 @media(max-width:600px){.single-opening h1{font-size:clamp(38px,9vw,60px)}.journey-copy p,.journey-ending p,.journey-outro p,.opening-copy{font-size:19px}}
+
+/* Companion portraits: one editorial use for each approved character image */
+.sibling-portraits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:30px 0}
+.sibling-portraits .story-portrait{margin:0;min-width:0}
+.sibling-portraits .story-portrait img{aspect-ratio:4/3;width:100%;height:auto;object-fit:cover;object-position:center}
+.sibling-portraits figcaption{margin-top:10px}
+@media(max-width:720px){.sibling-portraits{grid-template-columns:1fr;gap:28px}.sibling-portraits .story-portrait img{aspect-ratio:3/2}}
