@@ -37,6 +37,8 @@ jobs:
           cp 'Rope Mishap on the Misty Dock.png' _site/assets/images/chapters/chapter-one-well-the-knot-held.png
           cp 'Cliffside Porter in the Rain.png' _site/assets/images/chapters/chapter-one-not-enough.png
           cp 'Dusk Conversation in the Cliffside Harbour.png' _site/assets/images/chapters/chapter-one-a-better-question.png
+          cp 'Twilight Harbor City Canyon.png' _site/assets/images/deepwater-city-below.png
+          test -s _site/assets/images/deepwater-city-below.png
           test -s _site/assets/images/chapters/chapter-one-a-better-question.png
           test -s _site/assets/images/chapters/chapter-one-not-enough.png
           test -s _site/assets/images/chapters/chapter-one-well-the-knot-held.png
