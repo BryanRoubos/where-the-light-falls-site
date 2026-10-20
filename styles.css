@@ -193,3 +193,14 @@
 @media(max-width:850px){.character-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
 @media(max-width:480px){.character-gallery{gap:10px}.character-card-copy{padding:12px}.character-card h3{font-size:21px}.character-card p{font-size:12px}.character-card span{font-size:12px}.home-characters{padding-block:42px}.lore-portrait{width:min(100%,290px)}}
 @media(max-width:350px){.character-gallery{grid-template-columns:minmax(0,1fr)}}
+
+/* Deepwater district photography-style painterly illustration: full lore view and archive thumbnail. */
+.tile-with-image{padding:0;overflow:hidden}
+.tile-with-image .tile-place-image{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.tile-with-image small,.tile-with-image h3,.tile-with-image p{display:block;margin-left:25px;margin-right:25px}
+.tile-with-image small{margin-top:20px}
+.tile-with-image p{margin-bottom:24px}
+.lore-landscape{margin:0 0 30px}
+.lore-landscape img{width:100%;height:auto;display:block;border:1px solid #baa98e;border-radius:3px}
+.lore-landscape figcaption{text-align:center;font:italic 14px/1.5 Georgia,serif;margin-top:10px;color:#75695a}
+@media(max-width:560px){.tile-with-image small,.tile-with-image h3,.tile-with-image p{margin-left:20px;margin-right:20px}}
