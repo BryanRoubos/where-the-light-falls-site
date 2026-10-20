@@ -31,13 +31,19 @@ jobs:
       - name: Build spoiler-safe allowlisted site
         shell: bash
         run: |
-          mkdir -p _site/chapters _site/assets/images/chapters
+          mkdir -p _site/chapters _site/assets/images/chapters _site/assets/images/characters
           cp index.html chapter-one.html feedback.html styles.css app.js _site/
           cp chapters/chapter-one.md _site/chapters/
           cp 'Rope Mishap on the Misty Dock.png' _site/assets/images/chapters/chapter-one-well-the-knot-held.png
           cp 'Cliffside Porter in the Rain.png' _site/assets/images/chapters/chapter-one-not-enough.png
           cp 'Dusk Conversation in the Cliffside Harbour.png' _site/assets/images/chapters/chapter-one-a-better-question.png
           cp 'Twilight Harbor City Canyon.png' _site/assets/images/deepwater-city-below.png
+          cp 'Weary Rogue in the Misty Cliffside Harbour.png' _site/assets/images/characters/elias-varek.png
+          cp 'Mira Varek at the Misty Harbour.png' _site/assets/images/characters/mira-varek.png
+          cp 'Grizzled Captain in the Lantern-Lit Harbour.png' _site/assets/images/characters/bram.png
+          test -s _site/assets/images/characters/elias-varek.png
+          test -s _site/assets/images/characters/mira-varek.png
+          test -s _site/assets/images/characters/bram.png
           test -s _site/assets/images/deepwater-city-below.png
           test -s _site/assets/images/chapters/chapter-one-a-better-question.png
           test -s _site/assets/images/chapters/chapter-one-not-enough.png
