@@ -177,3 +177,19 @@
   .header .brand{font-size:10px}
   .story-hero .canyon-visual{width:min(100%,305px)}
 }
+
+/* Public character portraits: responsive homepage gallery and spoiler-safe lore pages. */
+.character-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:28px}
+.character-card{display:flex;flex-direction:column;min-width:0;overflow:hidden;border:1px solid #c7b1874f;border-radius:5px;background:#1d2c30;text-decoration:none;transition:border-color .2s,transform .2s}
+.character-card:hover{border-color:#cdb38b;transform:translateY(-3px)}
+.character-image{display:block;width:100%;aspect-ratio:3/4;height:auto;object-fit:cover;object-position:center 25%;background:linear-gradient(160deg,#435057,#1b2a30)}
+.character-image-placeholder{display:block}
+.character-card-copy{padding:16px 16px 18px;display:flex;flex:1;flex-direction:column;gap:9px}
+.character-card h3{margin:0;font:normal 25px/1.2 Georgia,serif}
+.character-card p{font:14px/1.55 system-ui;color:#c3cbc5;margin:0 0 12px}
+.character-card span{margin-top:auto;color:#e4c79c;font:600 13px system-ui}
+.home-characters>.muted{max-width:650px;margin-bottom:0}
+.lore-portrait{display:block;width:min(100%,330px);height:auto;aspect-ratio:3/4;object-fit:cover;object-position:center 20%;margin:0 auto 32px;border:1px solid #bca98b;border-radius:3px}
+@media(max-width:850px){.character-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}}
+@media(max-width:480px){.character-gallery{gap:10px}.character-card-copy{padding:12px}.character-card h3{font-size:21px}.character-card p{font-size:12px}.character-card span{font-size:12px}.home-characters{padding-block:42px}.lore-portrait{width:min(100%,290px)}}
+@media(max-width:350px){.character-gallery{grid-template-columns:minmax(0,1fr)}}
