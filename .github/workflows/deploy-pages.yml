@@ -22,6 +22,12 @@ jobs:
     steps:
       - name: Checkout public website
         uses: actions/checkout@v4
+      - name: Check JavaScript and reader entry points
+        run: |
+          node --check app.js
+          grep -q 'chapter-one.html' index.html
+          grep -q 'reader-prose' chapter-one.html
+          grep -q 'issues/1' feedback.html
       - name: Build spoiler-safe allowlisted site
         shell: bash
         run: |
