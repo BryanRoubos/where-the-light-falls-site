@@ -14,7 +14,7 @@ const entries=[
 ];
 const app=document.getElementById('app'),nav=document.getElementById('nav');
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const portraits={elias:'assets/images/characters/elias-varek.png',mira:'assets/images/characters/mira-varek.png',bram:'assets/images/characters/bram.png'};
+const portraits={elias:'assets/images/characters/elias-varek.png',mira:'assets/images/characters/mira-varek.png',maren:'assets/images/characters/maren.png',bram:'assets/images/characters/bram.png'};
 const characterImage=(e)=>portraits[e.id]?`<img class="character-image" src="${portraits[e.id]}" alt="Portrait of ${esc(e.title)}" loading="lazy" decoding="async">`:'<div class="character-image character-image-placeholder" aria-hidden="true"></div>';
 const characterCard=e=>`<a class="character-card" href="#/lore/${encodeURIComponent(e.id)}">${characterImage(e)}<div class="character-card-copy"><h3>${esc(e.title)}</h3><p>${esc(e.summary)}</p><span>Read character lore →</span></div></a>`;
 const card=(e,base='lore')=>`<a class="tile" href="#/${base}/${encodeURIComponent(e.id)}"><small>${esc(e.type)}</small><h3>${esc(e.title)}</h3><p>${esc(e.summary)}</p></a>`;
