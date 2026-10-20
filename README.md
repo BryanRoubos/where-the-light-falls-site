@@ -1,6 +1,6 @@
 # Where the Light Falls — public reader website
 
-A spoiler-conscious website for an original, novel-first dark fantasy mystery. Readers can explore the city and characters, **read the complete Chapter One** online and leave early-reader feedback.
+A spoiler-conscious website for an original, novel-first dark fantasy mystery. Readers can explore the city and characters, **read the complete Chapter One** online and share their thoughts with the author.
 
 ## Reader links
 
@@ -13,7 +13,7 @@ A spoiler-conscious website for an original, novel-first dark fantasy mystery. R
 
 - `index.html`, `app.js`, `styles.css` — story-first home page, public world encyclopedia, characters, and journal.
 - `chapter-one.html` — standalone, responsive, readable complete Chapter One; HTML text remains accessible without JavaScript.
-- `chapters/chapter-one.md` — exact public early-reader manuscript source. Changes to this Markdown are **not automatically synchronized** to the generated HTML; update both together.
+- `chapters/chapter-one.md` — exact public approved Chapter One manuscript source. Changes to this Markdown are **not automatically synchronized** to the generated HTML; update both together.
 - `feedback.html` — spoiler-aware feedback invitation that links to a GitHub issue (comments require a GitHub account and are public).
 - `.github/workflows/deploy-pages.yml` — allowlisted GitHub Pages deployment from `main`.
 
@@ -29,7 +29,7 @@ Live publication is confirmed only when the Pages deployment succeeds and both t
 
 This public repository must contain **only deliberately released reader-facing material**. Never copy or publish the private `BryanRoubos/where-the-light-falls-author` tree, its author-only timelines, drafts, secret plot information, private character revelations, or `canon-v2` prose wholesale.
 
-The first chapter is explicitly authorized for public early-reader release; it remains revisable. Public character and world entries are editorial summaries rather than an automatic canon export. New concept art requires separate asset approval and spoiler review. Do not automatically present an illustration of an exploratory scene as established canon.
+The author has explicitly approved Chapter One for public sharing; further revisions remain possible. Public character and world entries are editorial summaries rather than an automatic canon export. New concept art requires separate asset approval and spoiler review. Do not automatically present an illustration of an exploratory scene as established canon.
 
 ## Reader-feedback limitations
 
