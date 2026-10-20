@@ -111,3 +111,8 @@
 @media(max-width:560px){.story-hero h1{font-size:clamp(44px,13vw,63px)}.story-hero .hero-lead{font-size:17px}.canyon-visual{min-height:280px}.reader-frame{width:100%;margin:0 auto 40px;border-inline:0}.reader-intro{padding:45px 20px 26px}.reader-intro h1{font-size:44px}.reader-prose{padding:32px 23px 55px;line-height:1.78}.reading-tools{padding:10px 17px}.reading-tools-label{display:none}.end-of-chapter{padding:48px 24px}.end-of-chapter h2{font-size:34px}.reading-header{gap:14px}.reading-header .brand{max-width:190px;font-size:10px}.reading-nav{gap:12px;font-size:12px}.feedback-panel,.feedback-aside{padding:25px}}
 @media(prefers-reduced-motion:reduce){.feature-tile,#progress-fill{transition:none}}
 @media print{.reading-page{background:white}.reading-header,.reading-progress,.reading-tools,.end-of-chapter,.footer{display:none!important}.reader-frame{border:none;box-shadow:none;margin:0;width:100%}.reader-prose{padding:10px;max-width:70ch;font-size:11pt;line-height:1.45}.reader-intro{padding:20px}}
+
+/* Chapter One narrative illustrations: keep the approved image within the reading column. */
+.reader-prose .chapter-illustration{margin:2.3em 0 2.5em;max-width:100%;padding:0}
+.reader-prose .chapter-illustration img{display:block;width:100%;height:auto;max-width:100%;border:1px solid rgba(120,108,89,.33);border-radius:2px}
+.reader-prose .chapter-illustration figcaption{margin:.75em 0 0;font:italic .8em/1.5 Georgia,serif;text-align:center;opacity:.74}
