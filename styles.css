@@ -116,3 +116,11 @@
 .reader-prose .chapter-illustration{margin:2.3em 0 2.5em;max-width:100%;padding:0}
 .reader-prose .chapter-illustration img{display:block;width:100%;height:auto;max-width:100%;border:1px solid rgba(120,108,89,.33);border-radius:2px}
 .reader-prose .chapter-illustration figcaption{margin:.75em 0 0;font:italic .8em/1.5 Georgia,serif;text-align:center;opacity:.74}
+
+/* Approved Deepwater homepage illustration; keep the site label above the image. */
+.canyon-visual{aspect-ratio:3/4;min-height:0;max-height:none;background:#192a32}
+.canyon-visual .canyon-hero-image{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.canyon-visual .canyon-visual-label{pointer-events:none}
+@media(max-width:980px){.canyon-visual{min-height:0}}
+@media(max-width:800px){.canyon-visual{width:min(100%,530px);min-height:0;max-height:none;aspect-ratio:3/4;border-radius:120px 120px 5px 5px}}
+@media(max-width:560px){.canyon-visual{min-height:0;max-height:none}}
