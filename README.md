@@ -1,22 +1,44 @@
-# Where the Light Falls — public V2 website MVP
+# Where the Light Falls — public reader website
 
-**Status:** Local implementation package. Not deployed or committed to the GitHub development branch.
+A spoiler-conscious website for an original, novel-first dark fantasy mystery. Readers can explore the city and characters, **read the complete Chapter One** online and leave early-reader feedback.
 
-A lightweight, responsive, six-section static lore encyclopedia and concept-book preview. All content is curated for public-facing use; do not add private author Markdown or unreviewed illustrations. No build tools or dependencies. The site uses hash routing so it works from GitHub Pages project subpaths without server rewrites.
+## Reader links
+
+- Site entry: https://bryanroubos.github.io/where-the-light-falls-site/ (requires GitHub Pages to be enabled and the deployment workflow to succeed)
+- Direct chapter: https://bryanroubos.github.io/where-the-light-falls-site/chapter-one.html
+- Reader feedback: https://bryanroubos.github.io/where-the-light-falls-site/feedback.html
+- Public feedback thread: https://github.com/BryanRoubos/where-the-light-falls-site/issues/1
+
+## How this site is organized
+
+- `index.html`, `app.js`, `styles.css` — story-first home page, public world encyclopedia, characters, and journal.
+- `chapter-one.html` — standalone, responsive, readable complete Chapter One; HTML text remains accessible without JavaScript.
+- `chapters/chapter-one.md` — exact public early-reader manuscript source. Changes to this Markdown are **not automatically synchronized** to the generated HTML; update both together.
+- `feedback.html` — spoiler-aware feedback invitation that links to a GitHub issue (comments require a GitHub account and are public).
+- `.github/workflows/deploy-pages.yml` — allowlisted GitHub Pages deployment from `main`.
+
+The reader pages use semantic HTML, a narrow reading column, adjustable font size, a night-reading option, visible focus states, and mobile layouts. The visual canyon illustration is currently **CSS decoration**, not approved story artwork.
+
+## Deployment
+
+The Pages workflow deploys the public allowlist only. It attempts to enable Pages automatically; **if deployment fails because Pages is not configured**, open the repository's **Settings → Pages → Build and deployment → Source** and choose **GitHub Actions**. Then re-run the workflow under Actions.
+
+Live publication is confirmed only when the Pages deployment succeeds and both the home and direct chapter URLs load.
+
+## Public/private boundary
+
+This public repository must contain **only deliberately released reader-facing material**. Never copy or publish the private `BryanRoubos/where-the-light-falls-author` tree, its author-only timelines, drafts, secret plot information, private character revelations, or `canon-v2` prose wholesale.
+
+The first chapter is explicitly authorized for public early-reader release; it remains revisable. Public character and world entries are editorial summaries rather than an automatic canon export. New concept art requires separate asset approval and spoiler review. Do not automatically present an illustration of an exploratory scene as established canon.
+
+## Reader-feedback limitations
+
+The available feedback method is a public GitHub issue, which requires sign-in. The site does **not** currently collect anonymous submissions or personal data through its own backend. Visitors are informed that comments are public and may contain Chapter One spoilers.
 
 ## Local preview
 
-From this directory run `python -m http.server 8000` and visit `http://localhost:8000/`.
+From this repository's root run `python -m http.server 8000` and visit `http://localhost:8000/` and `http://localhost:8000/chapter-one.html`.
 
-## Publication controls
+## Next visual pass
 
-- Public lore here is a curated editorial excerpt, not an automated export of canon files.
-- No unpublished Mira revelation, Registrar, commissioner, custody timeline, or final-act mechanics.
-- No generated or legacy images are included.
-- `app.js` is the complete public article/search corpus, so everything inside it is visible to visitors.
-- GitHub Pages deployment is **not** configured in this package.
-- Public journal entries are examples of style and content, not automatically authorized publications. Review them before going live.
-
-## Remaining work
-
-Content approval, visual polish, real approved illustrations, independent spoiler review, robust automated smoke tests, and a GitHub Discussions URL after repository Discussions is enabled.
+Build and approve bespoke, spoiler-safe story illustrations for the chapter later. Suggested needs: a clearly ordinary steep Deepwater stairway, the city in afternoon shadow, waterfront trade, and a quieter Maren meeting. Avoid visual details that imply unapproved mechanics or Mira's eventual fate. Integrate only after source and narrative continuity checks.
