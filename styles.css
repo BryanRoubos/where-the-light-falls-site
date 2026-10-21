@@ -322,3 +322,43 @@
 .atlas-place:nth-of-type(even)>*{direction:ltr}
 @media(max-width:900px){.atlas-place{grid-template-columns:1fr;gap:17px;margin:35px 0 60px}.atlas-place:nth-of-type(even){direction:ltr}}
 @media(max-width:640px){.home-paths .story-grid{grid-template-columns:1fr}.home-paths .feature-tile{min-height:0;padding:23px}.atlas-place .atlas-text p{font-size:16px}.atlas-place figure img{max-height:none}}
+
+/* Hero refinement: the novel's opening stays dominant; Deepwater is a supporting image.
+   Avoid enlarging the source painting into a soft full-width banner. */
+@media (min-width:901px){
+  .story-hero .hero-grid{
+    grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+    align-items:center;
+    gap:clamp(32px,5vw,76px);
+  }
+  .story-hero .hero-copy{max-width:640px}
+  .story-hero .canyon-visual{
+    width:100%;
+    max-width:465px;
+    justify-self:end;
+    aspect-ratio:4/3;
+    border-radius:8px;
+  }
+}
+@media (min-width:641px) and (max-width:900px){
+  .story-hero .canyon-visual{
+    width:min(100%,520px);
+    max-width:520px;
+    aspect-ratio:16/10;
+    justify-self:center;
+    border-radius:8px;
+  }
+}
+@media (max-width:640px){
+  .story-hero .canyon-visual{
+    width:min(100%,400px);
+    max-width:400px;
+    aspect-ratio:4/3;
+    justify-self:center;
+    border-radius:7px;
+  }
+  .story-hero .canyon-visual-label{
+    padding:38px 15px 13px;
+  }
+}
+.story-hero .canyon-hero-image{object-fit:cover;object-position:50% 48%}
