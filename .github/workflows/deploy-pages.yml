@@ -33,7 +33,7 @@ jobs:
         shell: bash
         run: |
           mkdir -p _site/chapters _site/assets/images/chapters _site/assets/images/characters
-          cp index.html chapter-one.html feedback.html styles.css app.js _site/
+          cp index.html chapter-one.html feedback.html styles.css app.js google6a72b1af88a0a393.html _site/
           cp chapters/chapter-one.md _site/chapters/
           cp 'Rope Mishap on the Misty Dock.png' _site/assets/images/chapters/chapter-one-well-the-knot-held.png
           cp 'Cliffside Porter in the Rain.png' _site/assets/images/chapters/chapter-one-not-enough.png
@@ -60,6 +60,7 @@ jobs:
           test -s _site/lore/elias.html
           test -s _site/sitemap.xml
           test -s _site/robots.txt
+          grep -qx 'google-site-verification: google6a72b1af88a0a393.html' _site/google6a72b1af88a0a393.html
           test -s _site/chapter-one.html
           test -s _site/chapters/chapter-one.md
       - name: Configure Pages
