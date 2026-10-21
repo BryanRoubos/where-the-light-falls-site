@@ -17,7 +17,7 @@ A spoiler-conscious website for an original, novel-first dark fantasy mystery. R
 - `feedback.html` — spoiler-aware feedback invitation that links to a GitHub issue (comments require a GitHub account and are public).
 - `.github/workflows/deploy-pages.yml` — allowlisted GitHub Pages deployment from `main`.
 
-The reader pages use semantic HTML, a narrow reading column, adjustable font size, a night-reading option, visible focus states, and mobile layouts. The visual canyon illustration is currently **CSS decoration**, not approved story artwork.
+The reader pages use semantic HTML, a narrow reading column, adjustable font size, a night-reading option, visible focus states, and mobile layouts. The homepage, illustrated district gallery, and character portraits now use selected public visual-development assets. The three approved Chapter One illustrations remain unchanged.
 
 ## Deployment
 
@@ -39,6 +39,17 @@ The available feedback method is a public GitHub issue, which requires sign-in. 
 
 From this repository's root run `python -m http.server 8000` and visit `http://localhost:8000/` and `http://localhost:8000/chapter-one.html`.
 
-## Next visual pass
+## Artwork organization
 
-Build and approve bespoke, spoiler-safe story illustrations for the chapter later. Suggested needs: a clearly ordinary steep Deepwater stairway, the city in afternoon shadow, waterfront trade, and a quieter Maren meeting. Avoid visual details that imply unapproved mechanics or Mira's eventual fate. Integrate only after source and narrative continuity checks.
+- `assets/images/chapters/`: approved Chapter One illustrations (preserved).
+- `assets/images/characters/`: character imagery, including Mira and Bram.
+- `assets/images/districts/`: Upper City, transition, Middle Heights and Deepwater artwork.
+- `assets/images/scenes/`: Upper City everyday life, Maren at work and the workshop conversation.
+- `artwork/archive/`: superseded source paintings excluded from the deployed site.
+- `ARTWORK.md`: asset provenance and production rules.
+
+The workflow copies only `assets/images/` into the output. It also builds crawlable, standalone HTML entries, `sitemap.xml` and `robots.txt`. To request Google indexing, verify the site in Google Search Console, submit the live sitemap and use URL Inspection on the homepage. Indexing timing and eligibility are controlled by Google.
+
+## Outstanding optional illustrations
+
+An Arch coin close-up, interiors and smaller environmental details may add variety later. Only publish these after visual approval and a public-spoiler check.
