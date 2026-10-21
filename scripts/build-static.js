@@ -46,13 +46,13 @@ write('index.html','Where the Light Falls — Dark Fantasy Novel by Bryan Roubos
 const sections=[
  ['discover','Discover the World','An introduction to the canyon metropolis, its people, geography and history.'],
  ['world','The World','Explore the city, the Deepwater river and the divided districts of Where the Light Falls.'],
- ['characters','Characters','Meet Elias, Mira, Maren and Bram, characters in Bryan Roubos’s dark fantasy novel Where the Light Falls.'],
+ ['characters','Characters','Meet Elias Varek, Mira, Maren, Bram and an enigmatic unnamed figure from Bryan Roubos’s dark fantasy novel Where the Light Falls.'],
  ['chronology','Chronology','How the crossings, trade routes and city districts of Where the Light Falls developed.'],
  ['lore','Lore Archive','Explore the public lore archive for Where the Light Falls, including its people, history and geography.']
 ];
 for(const [slug,title,description] of sections){
  let body=page['/'+slug]();
- if(slug==='lore') body=body.replace(/<label for="search">[\s\S]*?<\/div><div class="grid" id="results" aria-live="polite"><\/div>/,'<div class="grid">'+entries.map(e=>card(e)).join('')+'</div>');
+ if(slug==='lore') body=body.replace(/<label for="search">[\s\S]*?<div class="grid" id="results" aria-live="polite"><\/div>/,'<div class="grid">'+entries.map(e=>card(e)).join('')+'</div>');
  write(slug+'.html',title+' — Where the Light Falls',description,body);
 }
 for(const e of entries) write('lore/'+e.id+'.html',e.title+' — Where the Light Falls Lore',e.summary+' Explore the public lore of Where the Light Falls.',article(e));

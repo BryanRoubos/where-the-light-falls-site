@@ -260,3 +260,10 @@
 .lore-landscape{margin:24px auto 30px;width:min(100%,900px)}
 .lore-landscape img{display:block;width:100%;max-height:none;height:auto;object-fit:contain}
 .lore-landscape figcaption{text-align:center;font:italic 14px/1.5 Georgia,serif;margin-top:9px;color:#827361}
+
+/* Character paintings retain their framing even when supplied in landscape format. */
+.character-gallery{grid-template-columns:repeat(auto-fit,minmax(min(100%,225px),1fr))}
+.character-image{object-fit:cover;object-position:center 27%;background:#18272b}
+.character-card:focus-visible,.tile:focus-visible{outline:3px solid #e3bd83;outline-offset:3px}
+@media(min-width:960px){.character-gallery{gap:clamp(16px,2vw,26px)}}
+@media(max-width:600px){.character-gallery{grid-template-columns:repeat(auto-fit,minmax(min(100%,155px),1fr));gap:13px}.character-card-copy{padding:14px}.character-card-copy h3{font-size:clamp(20px,5vw,25px)}}

@@ -44,6 +44,8 @@ jobs:
           test -s _site/assets/images/scenes/maren-inspects-cargo.png
           test -s _site/assets/images/characters/mira-varek.png
           test -s _site/assets/images/characters/bram.png
+          test -s _site/assets/images/characters/unnamed-leader.png
+          test -s _site/lore/leader.html
           test -s _site/assets/images/districts/upper-city-grand-reveal.png
           test -s _site/about.html
           test -s _site/world.html
