@@ -25,6 +25,7 @@ jobs:
       - name: Check JavaScript and reader entry points
         run: |
           node --check app.js
+          node --check scripts/build-static.js
           grep -q 'chapter-one.html' index.html
           grep -q 'reader-prose' chapter-one.html
           grep -q 'issues/1' feedback.html
@@ -52,7 +53,13 @@ jobs:
           test -s _site/assets/images/chapters/chapter-one-a-better-question.png
           test -s _site/assets/images/chapters/chapter-one-not-enough.png
           test -s _site/assets/images/chapters/chapter-one-well-the-knot-held.png
+          node scripts/build-static.js
           touch _site/.nojekyll
+          test -s _site/about.html
+          test -s _site/world.html
+          test -s _site/lore/elias.html
+          test -s _site/sitemap.xml
+          test -s _site/robots.txt
           test -s _site/chapter-one.html
           test -s _site/chapters/chapter-one.md
       - name: Configure Pages
