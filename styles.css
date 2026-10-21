@@ -362,3 +362,51 @@
   }
 }
 .story-hero .canyon-hero-image{object-fit:cover;object-position:50% 48%}
+
+/* 2026 reader experience: unified static navigation and inviting encyclopedia. */
+.header .mobile-nav{display:none!important}
+.header .desktop-nav{display:flex!important;position:static;align-items:center;flex-wrap:wrap;gap:clamp(10px,1.7vw,23px);padding:0;background:transparent;box-shadow:none}
+.header .desktop-nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none}
+.header .desktop-nav .nav-feature{padding:9px 13px;border:1px solid #cdb38b77;border-radius:3px}
+.header:has(.desktop-nav){flex-direction:row;align-items:center;justify-content:space-between}
+.page-intro{max-width:78ch;font-size:clamp(17px,1.9vw,21px);line-height:1.75;color:#d4dad2;margin:15px 0 35px}
+.entry-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:32px}
+.entry-guide section,.lore-start{background:linear-gradient(145deg,#25383a,#18272c);border:1px solid #b19b7455;padding:clamp(20px,3vw,30px)}
+.entry-guide h2{font:normal clamp(26px,3vw,35px)/1.2 Georgia,serif;margin:16px 0}
+.entry-guide p,.lore-start p{color:#c9d2cd}
+.entry-guide a,.lore-start a,.tile-action{color:#e9c998;font:600 14px/1.6 system-ui;text-decoration:none}
+.entry-guide a:hover,.lore-start a:hover,.tile-action:hover{text-decoration:underline}
+.lore-start{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(20px,4vw,60px);align-items:center;margin:40px 0 62px}
+.lore-start h2{font:normal clamp(26px,3.5vw,42px)/1.15 Georgia,serif;margin:10px 0 14px}
+.lore-start-links{display:flex;flex-direction:column;gap:12px}
+.lore-start-links a{display:block;padding:12px 16px;border-bottom:1px solid #cdb38b4d}
+.lore-category{margin:48px 0 62px}
+.lore-category-heading{display:flex;justify-content:space-between;gap:24px;align-items:baseline;border-bottom:1px solid #cdb38b5c;margin-bottom:23px;padding-bottom:8px}
+.lore-category-heading h2{font:normal clamp(28px,3.3vw,43px)/1.18 Georgia,serif;margin:0}
+.lore-category-heading p{max-width:430px;color:#bfcac3;margin:0}
+.lore-category .tile{display:flex;flex-direction:column;min-height:210px;transition:transform .2s,border-color .2s}
+.lore-category .tile:hover{transform:translateY(-3px)}
+.lore-category .tile .tile-action{margin-top:auto;padding-top:15px}
+.page-next{text-align:center;max-width:660px;margin:58px auto 12px;padding:25px 18px;border-top:1px solid #cdb38b55}
+.page-next p{font-size:19px;color:#dbe0d8}
+.page-next a:not(.btn){color:#e6c493}
+.breadcrumbs{margin:28px auto 0;color:#bfcbc5;font:13px/1.6 system-ui}
+.breadcrumbs a{color:#e2c293;text-decoration:none}
+.breadcrumbs span{margin:0 8px;color:#93a7a0}
+.lore-entry-hook{font-size:clamp(20px,2.6vw,27px);line-height:1.5;color:#564734;border-left:3px solid #987b54;padding-left:18px}
+.read-next{margin-top:35px;border-top:1px solid #b7ab97;padding-top:15px}
+.read-next p{line-height:2}
+.story-nudge{border-top:1px solid #b7ab97;margin-top:36px;padding-top:18px}
+@media(max-width:900px){.entry-guide{grid-template-columns:1fr}.lore-start{grid-template-columns:1fr}.lore-category-heading{display:block}.lore-category-heading p{margin-top:12px}}
+@media(max-width:760px){
+ .header:has(.desktop-nav){flex-direction:row;flex-wrap:nowrap;align-items:center}
+ .header .desktop-nav{display:none!important}
+ .header .mobile-nav{display:block!important;position:relative;flex:0 0 auto;font:14px/1.5 system-ui;color:#eee9dc}
+ .mobile-nav summary{cursor:pointer;list-style:none;padding:10px 13px;border:1px solid #cdb38b88;border-radius:4px;min-height:44px}
+ .mobile-nav summary::-webkit-details-marker{display:none}
+ .mobile-nav[open] nav{position:absolute;right:0;top:calc(100% + 12px);display:flex;flex-direction:column;width:min(82vw,280px);padding:12px;background:#142127;box-shadow:0 16px 40px #0009;border:1px solid #cdb38b65;z-index:50}
+ .mobile-nav nav a{padding:11px 10px;min-height:44px;text-decoration:none;color:#efdfc8;white-space:normal}
+ .mobile-nav nav a:hover{background:#2a3b3e}
+ .lore-category .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:550px){.lore-category .grid{grid-template-columns:1fr}.lore-start{padding:20px}.lore-category{margin:40px 0}.lore-category .tile{min-height:165px}}

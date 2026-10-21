@@ -53,11 +53,11 @@ const sections=[
 ];
 for(const [slug,title,description] of sections){
  let body=page['/'+slug]();
- if(slug==='lore') body=body.replace(/<label for="search">[\s\S]*?<div class="grid" id="results" aria-live="polite"><\/div>/,'<div class="grid">'+entries.map(e=>card(e)).join('')+'</div>');
+ 
  write(slug+'.html',title+' — Where the Light Falls',description,body);
 }
 for(const e of entries) write('lore/'+e.id+'.html',e.title+' — Where the Light Falls Lore',e.summary+' Explore the public lore of Where the Light Falls.',article(e));
-const bio='<section class="shell section"><div class="kicker">ABOUT THE AUTHOR</div><h1 class="title">Bryan Roubos</h1><div class="paper"><h2>About the story</h2><p>I’m Bryan Roubos, the author and creator of <em>Where the Light Falls</em>, an original dark fantasy mystery in development.</p><p>The story follows Elias Varek as he searches for answers about his missing sister in a vast canyon metropolis. Chapter One is available to read here. </p><p><a href="chapter-one.html">Read Chapter One</a> · <a href="https://github.com/BryanRoubos" rel="author">Bryan Roubos on GitHub</a></p></div></section>';
+const bio='<section class="shell section"><div class="kicker">ABOUT THE AUTHOR</div><h1 class="title">Bryan Roubos</h1><div class="paper"><h2>About the story</h2><p>I’m Bryan Roubos, creator of <em>Where the Light Falls</em>. I’m writing a dark fantasy mystery about loss, belonging and the lives people build within an enormous city divided by a canyon.</p><p>The novel follows Elias Varek, a Lower City worker who has spent two years searching for news of his younger sister. I’m sharing its opening chapter and a carefully curated glimpse of its world as the book develops. </p><p><a href="chapter-one.html">Read Chapter One</a> · <a href="https://github.com/BryanRoubos" rel="author">Bryan Roubos on GitHub</a></p></div></section>';
 write('about.html','About Bryan Roubos — Author of Where the Light Falls','About Bryan Roubos, author and creator of the dark fantasy mystery novel Where the Light Falls.',bio,{schema:true});
 const files=['index.html',...sections.map(s=>s[0]+'.html'),'about.html','chapter-one.html','feedback.html',...entries.map(e=>'lore/'+e.id+'.html')];
 fs.writeFileSync(path.join(site,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+files.map(f=>'<url><loc>'+url(f)+'</loc></url>').join('\n')+'\n</urlset>\n');
