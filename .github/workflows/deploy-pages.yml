@@ -32,29 +32,19 @@ jobs:
       - name: Build spoiler-safe allowlisted site
         shell: bash
         run: |
-          mkdir -p _site/chapters _site/assets/images/chapters _site/assets/images/characters
+          mkdir -p _site/chapters _site/assets/images
           cp index.html chapter-one.html feedback.html styles.css app.js google6a72b1af88a0a393.html _site/
           cp chapters/chapter-one.md _site/chapters/
-          cp 'Rope Mishap on the Misty Dock.png' _site/assets/images/chapters/chapter-one-well-the-knot-held.png
-          cp 'Cliffside Porter in the Rain.png' _site/assets/images/chapters/chapter-one-not-enough.png
-          cp 'Dusk Conversation in the Cliffside Harbour.png' _site/assets/images/chapters/chapter-one-a-better-question.png
-          cp 'Twilight Harbor City Canyon.png' _site/assets/images/deepwater-city-below.png
-          cp 'Lower Level.png' _site/assets/images/deepwater-working-waterfront.png
-          test -s _site/assets/images/deepwater-working-waterfront.png
-          cp 'Weary Rogue in the Misty Cliffside Harbour.png' _site/assets/images/characters/elias-varek.png
-          cp 'Mira Varek at the Misty Harbour.png' _site/assets/images/characters/mira-varek.png
-          cp 'Freckled Redhead at the Fogbound Harbour.png' _site/assets/images/characters/maren.png
-          test -s _site/assets/images/characters/maren.png
-          cp 'Grizzled Captain in the Lantern-Lit Harbour.png' _site/assets/images/characters/bram.png
-          test -s _site/assets/images/characters/elias-varek.png
-          test -s _site/assets/images/characters/mira-varek.png
-          test -s _site/assets/images/characters/bram.png
-          test -s _site/assets/images/deepwater-city-below.png
-          test -s _site/assets/images/chapters/chapter-one-a-better-question.png
-          test -s _site/assets/images/chapters/chapter-one-not-enough.png
-          test -s _site/assets/images/chapters/chapter-one-well-the-knot-held.png
+          cp -R assets/images/. _site/assets/images/
           node scripts/build-static.js
           touch _site/.nojekyll
+          test -s _site/assets/images/chapters/chapter-one-not-enough.png
+          test -s _site/assets/images/chapters/chapter-one-well-the-knot-held.png
+          test -s _site/assets/images/chapters/chapter-one-a-better-question.png
+          test -s _site/assets/images/scenes/maren-inspects-cargo.png
+          test -s _site/assets/images/characters/mira-varek.png
+          test -s _site/assets/images/characters/bram.png
+          test -s _site/assets/images/districts/upper-city-grand-reveal.png
           test -s _site/about.html
           test -s _site/world.html
           test -s _site/lore/elias.html

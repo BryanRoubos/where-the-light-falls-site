@@ -23,22 +23,21 @@ const footer = '<footer class="footer"><span>© 2026 Bryan Roubos</span><span><a
 const person = {
  '@context':'https://schema.org','@type':'Person','@id':url('about.html')+'#bryan',
  name:'Bryan Roubos',url:url('about.html'),
- description:'Software engineering student at HU University of Applied Sciences Utrecht, working on backend development and AI infrastructure, and author of Where the Light Falls.',
- affiliation:{'@type':'CollegeOrUniversity',name:'HU University of Applied Sciences Utrecht'},
- sameAs:['https://github.com/BryanRoubos','https://www.linkedin.com/in/bryan-roubos/']
+ description:'Author and creator of the dark fantasy mystery Where the Light Falls.',
+ sameAs:['https://github.com/BryanRoubos']
 };
 const book = {'@context':'https://schema.org','@type':'Book','@id':url('index.html')+'#book',name:'Where the Light Falls',url:url('index.html'),genre:['Dark fantasy','Mystery'],inLanguage:'en',author:{'@id':person['@id']},description:'An original dark fantasy mystery novel in progress, set in a city divided by light and shadow.'};
 function write(name, title, description, body, extras={}) {
  const canonical=url(name);
  const jsonld=extras.schema?'<script type="application/ld+json">'+JSON.stringify({'@context':'https://schema.org','@graph':[person,book]})+'</script>':'';
- const verification=name==='index.html'?'<meta name="google-site-verification" content="">':'';
+ const verification="";
  const image=url('assets/images/deepwater-city-below.png');
  const html='<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'+
  '<title>'+esc(title)+'</title>'+(name.startsWith('lore/')?'<base href="../">':'')+'<meta name="description" content="'+esc(description)+'"><meta name="theme-color" content="#111a1f">\n'+
  '<link rel="canonical" href="'+canonical+'">\n'+
  '<meta property="og:type" content="'+(extras.schema?'profile':'website')+'"><meta property="og:site_name" content="Where the Light Falls"><meta property="og:title" content="'+esc(title)+'"><meta property="og:description" content="'+esc(description)+'"><meta property="og:url" content="'+canonical+'"><meta property="og:image" content="'+image+'">\n'+
  '<meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="styles.css">'+verification+jsonld+'</head><body>\n'+
- '<a class="skip" href="'+(name.startsWith('lore/')?name+'#main':'#main')+'">Skip to main content</a>'+nav+'<main id="main">'+links(body)+'</main>'+footer+'</body></html>';
+ '<a class="skip" href="#main">Skip to main content</a>'+nav+'<main id="main">'+links(body)+'</main>'+footer+'</body></html>';
  fs.mkdirSync(path.dirname(path.join(site,name)),{recursive:true});
  fs.writeFileSync(path.join(site,name),html);
 }
@@ -57,8 +56,8 @@ for(const [slug,title,description] of sections){
  write(slug+'.html',title+' — Where the Light Falls',description,body);
 }
 for(const e of entries) write('lore/'+e.id+'.html',e.title+' — Where the Light Falls Lore',e.summary+' Explore the public lore of Where the Light Falls.',article(e));
-const bio='<section class="shell section"><div class="kicker">ABOUT THE AUTHOR</div><h1 class="title">Bryan Roubos</h1><div class="paper"><h2>Software engineering student &amp; fantasy author</h2><p>I am a software engineering student at HU University of Applied Sciences Utrecht in the Netherlands. My interests include backend development, AI infrastructure and the engineering of systems used to run and serve AI models.</p><p>At Tandem-IT, I work with a team on an AI infrastructure cluster for HU Utrecht, contributing to Go backend development, service integration and infrastructure supporting GPU workloads.</p><p>I am also the author of <em>Where the Light Falls</em>, an original dark fantasy mystery novel in development. It follows Elias Varek as he searches for answers about his missing sister in a city built along a vast canyon.</p><p><a href="chapter-one.html">Read the first chapter</a> · <a href="https://github.com/BryanRoubos" rel="me">GitHub</a> · <a href="https://www.linkedin.com/in/bryan-roubos/" rel="me">LinkedIn</a></p></div></section>';
-write('about.html','About Bryan Roubos — Software Engineering Student and Author','Meet Bryan Roubos, HU Utrecht software engineering student working on AI infrastructure and author of the dark fantasy novel Where the Light Falls.',bio,{schema:true});
+const bio='<section class="shell section"><div class="kicker">ABOUT THE AUTHOR</div><h1 class="title">Bryan Roubos</h1><div class="paper"><h2>About the story</h2><p>I’m Bryan Roubos, the author and creator of <em>Where the Light Falls</em>, an original dark fantasy mystery in development.</p><p>The story follows Elias Varek through a vast canyon metropolis as he searches for answers about his missing sister. I’m building its world, characters and illustrations alongside the novel.</p><p><a href="chapter-one.html">Read Chapter One</a> · <a href="https://github.com/BryanRoubos" rel="author">Bryan Roubos on GitHub</a></p></div></section>';
+write('about.html','About Bryan Roubos — Author of Where the Light Falls','About Bryan Roubos, author and creator of the dark fantasy mystery novel Where the Light Falls.',bio,{schema:true});
 const files=['index.html',...sections.map(s=>s[0]+'.html'),'about.html','chapter-one.html','feedback.html',...entries.map(e=>'lore/'+e.id+'.html')];
 fs.writeFileSync(path.join(site,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+files.map(f=>'<url><loc>'+url(f)+'</loc></url>').join('\n')+'\n</urlset>\n');
 fs.writeFileSync(path.join(site,'robots.txt'),'User-agent: *\nAllow: /\nSitemap: '+url('sitemap.xml')+'\n');

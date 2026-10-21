@@ -235,3 +235,16 @@
 /* Crawlable static pages retain navigation on narrow screens without relying on JS. */
 .header .static-nav{display:flex;flex-wrap:wrap}
 @media(max-width:800px){.header:has(.static-nav){flex-wrap:wrap}.header .static-nav{position:static;display:flex;flex-wrap:wrap;padding:0;background:transparent;gap:12px}}
+
+/* Expanded illustrated world — responsive desktop/tablet/mobile gallery. */
+.artwork-gallery{padding-block:clamp(42px,6vw,80px)}
+.artwork-gallery>p{max-width:68ch}
+.illustration-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2.5vw,28px);margin-top:28px}
+.illustration-grid figure{min-width:0;margin:0;background:#1c2b30;border:1px solid #a58b6750;overflow:hidden}
+.illustration-grid img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center}
+.illustration-grid figcaption{padding:12px 16px;color:#e1d5bd;font:14px/1.5 system-ui}
+.character-image{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center 25%}
+.lore-landscape img{display:block;width:100%;height:auto;max-height:490px;object-fit:contain}
+.static-nav{flex-wrap:wrap;justify-content:flex-end;row-gap:10px}
+@media(max-width:900px){.static-nav{display:flex;position:static;background:transparent;padding:8px 0;flex-flow:row wrap;width:100%;justify-content:center;box-shadow:none}.header:has(.static-nav){flex-wrap:wrap}.static-nav a{padding:9px;min-height:44px;display:inline-flex;align-items:center}}
+@media(max-width:600px){.illustration-grid{grid-template-columns:1fr}.illustration-grid img{aspect-ratio:4/3}.artwork-gallery{padding-block:38px}.static-nav{gap:4px}.static-nav a{font-size:13px;padding:8px}}
