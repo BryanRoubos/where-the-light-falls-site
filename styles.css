@@ -112,21 +112,21 @@
 @media(prefers-reduced-motion:reduce){.feature-tile,#progress-fill{transition:none}}
 @media print{.reading-page{background:white}.reading-header,.reading-progress,.reading-tools,.end-of-chapter,.footer{display:none!important}.reader-frame{border:none;box-shadow:none;margin:0;width:100%}.reader-prose{padding:10px;max-width:70ch;font-size:11pt;line-height:1.45}.reader-intro{padding:20px}}
 
-/* Chapter illustrations: consistent displayed width across aspect ratios, no cropping. */
+/* Chapter illustrations: equally prominent, responsive, and uncropped. */
 .reader-prose .chapter-illustration{
   display:flex;
   flex-direction:column;
   align-items:center;
-  margin:2.3em auto 2.5em;
   width:100%;
   max-width:100%;
+  margin:2.3em auto 2.5em;
   padding:0;
 }
 .reader-prose .chapter-illustration img{
   display:block;
-  width:min(350px,100%);
-  max-width:100%;
+  width:min(440px,100%);
   height:auto;
+  max-width:100%;
   object-fit:contain;
   border:1px solid rgba(120,108,89,.33);
   border-radius:2px;
@@ -138,10 +138,10 @@
   opacity:.74;
 }
 @media (min-width:601px) and (max-width:900px){
-  .reader-prose .chapter-illustration img{width:min(320px,100%)}
+  .reader-prose .chapter-illustration img{width:min(400px,100%)}
 }
 @media (max-width:600px){
-  .reader-prose .chapter-illustration img{width:min(320px,100%)}
+  .reader-prose .chapter-illustration img{width:min(400px,100%)}
 }
 
 /* Approved Deepwater homepage illustration; keep the site label above the image. */
