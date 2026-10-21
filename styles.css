@@ -113,7 +113,9 @@
 @media print{.reading-page{background:white}.reading-header,.reading-progress,.reading-tools,.end-of-chapter,.footer{display:none!important}.reader-frame{border:none;box-shadow:none;margin:0;width:100%}.reader-prose{padding:10px;max-width:70ch;font-size:11pt;line-height:1.45}.reader-intro{padding:20px}}
 
 /* Chapter One narrative illustrations: keep the approved image within the reading column. */
-.reader-prose .chapter-illustration{margin:2.3em 0 2.5em;max-width:100%;padding:0}
+/* Keep chapter paintings at an editorial illustration size on wide screens. */
+.reader-prose .chapter-illustration{margin:2.3em auto 2.5em;width:min(100%,520px);max-width:100%;padding:0}
+@media(max-width:600px){.reader-prose .chapter-illustration{width:100%}}
 .reader-prose .chapter-illustration img{display:block;width:100%;height:auto;max-width:100%;border:1px solid rgba(120,108,89,.33);border-radius:2px}
 .reader-prose .chapter-illustration figcaption{margin:.75em 0 0;font:italic .8em/1.5 Georgia,serif;text-align:center;opacity:.74}
 
