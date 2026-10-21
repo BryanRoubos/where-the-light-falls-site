@@ -267,3 +267,41 @@
 .character-card:focus-visible,.tile:focus-visible{outline:3px solid #e3bd83;outline-offset:3px}
 @media(min-width:960px){.character-gallery{gap:clamp(16px,2vw,26px)}}
 @media(max-width:600px){.character-gallery{grid-template-columns:repeat(auto-fit,minmax(min(100%,155px),1fr));gap:13px}.character-card-copy{padding:14px}.character-card-copy h3{font-size:clamp(20px,5vw,25px)}}
+
+/* Illustrated homepage: larger Deepwater establishing view and readable cards. */
+.story-hero .hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(24px,4vw,44px);align-items:start}
+.story-hero .hero-copy{max-width:960px}
+.story-hero .hero-lead{max-width:760px}
+.story-hero .canyon-visual{box-sizing:border-box;width:100%;max-width:none;min-height:0;max-height:none;aspect-ratio:16/8;border-radius:8px;justify-self:stretch;box-shadow:0 20px 50px #0006}
+.story-hero .canyon-hero-image{width:100%;height:100%;object-fit:cover;object-position:center 44%}
+.story-hero .canyon-visual-label{padding:64px 22px 20px;align-items:flex-start;text-align:left}
+.story-hero .canyon-visual-label strong{font-size:clamp(25px,3.5vw,39px)}
+.story-grid .feature-tile{padding:0 0 23px;min-height:0;overflow:hidden}
+.story-grid .feature-tile .feature-image{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center 38%;display:block;margin-bottom:21px;border-bottom:1px solid #d1b18533}
+.story-grid .feature-tile .number,.story-grid .feature-tile h3,.story-grid .feature-tile p,.story-grid .feature-tile .tile-link{margin-left:23px;margin-right:23px}
+.story-grid .feature-tile h3{margin-top:14px}
+.story-grid .feature-tile .tile-link{margin-top:auto;padding-top:16px}
+.home-explore-tile{padding:0 0 23px;overflow:hidden;display:flex;flex-direction:column}
+.home-explore-image{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;margin-bottom:19px}
+.home-explore-tile small,.home-explore-tile h3,.home-explore-tile p{margin-left:22px;margin-right:22px}
+.home-explore-tile h3{margin-top:13px}
+@media(max-width:900px){
+.story-hero .hero-grid{grid-template-columns:minmax(0,1fr);gap:24px}
+.story-hero .canyon-visual{width:100%;max-width:none;aspect-ratio:16/9;min-height:0;max-height:none;justify-self:stretch;border-radius:8px}
+.story-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:640px){
+.story-hero .canyon-visual{width:100%;max-width:none;aspect-ratio:4/3;min-height:0;max-height:none;border-radius:6px}
+.story-hero .canyon-visual-label{padding:38px 15px 13px}
+.story-hero .canyon-visual-label strong{font-size:clamp(22px,6vw,30px)}
+.story-grid{grid-template-columns:1fr}
+.story-grid .feature-tile .feature-image,.home-explore-image{aspect-ratio:16/10}
+.header:has(.static-nav){display:flex;flex-direction:column;align-items:stretch;gap:10px}
+.header .static-nav{display:flex;position:static;width:100%;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;flex-wrap:nowrap;justify-content:flex-start;gap:8px;padding:4px 0 10px;background:transparent;box-shadow:none}
+.header .static-nav a{display:inline-flex;white-space:nowrap;flex:0 0 auto;align-items:center;min-height:44px;padding:9px 12px}
+.character-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.character-card{min-width:0}
+.character-card-copy{padding:13px}
+.character-card-copy h3{font-size:clamp(18px,5vw,24px);overflow-wrap:anywhere}
+}
+@media(max-width:390px){.story-hero .canyon-visual{width:100%;max-width:none}.header .static-nav a{padding-inline:10px}}
