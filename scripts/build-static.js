@@ -6,7 +6,7 @@ const site = path.resolve('_site');
 const original = fs.readFileSync('app.js','utf8');
 const source = original.slice(0, original.indexOf("document.getElementById('menu').addEventListener"));
 if (!source || source === original) throw Error('Cannot find end of original application; update static generator.');
-const sandbox = {};
+const sandbox = {document:{getElementById:()=>({})}};
 vm.runInNewContext(source + '\nglobalThis.exported = {entries,page,article,characterCard,card};', sandbox, {timeout:1000});
 const {entries,page,article,characterCard,card} = sandbox.exported;
 const base = 'https://bryanroubos.github.io/where-the-light-falls-site/';
