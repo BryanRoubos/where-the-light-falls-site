@@ -7,7 +7,7 @@ function walk(dir) {
  for (const ent of fs.readdirSync(dir,{withFileTypes:true})) {
   const p=path.join(dir,ent.name);
   if(ent.isDirectory()) walk(p);
-  else if(p.endsWith('.html')) htmlFiles.push(p);
+  else if(p.endsWith('.html') && !path.basename(p).startsWith('google')) htmlFiles.push(p);
  }
 }
 walk(root);
