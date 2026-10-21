@@ -66,6 +66,11 @@
       "path": "assets/images/scenes/upper-city-everyday-life.png",
       "scope": "environment",
       "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/districts/middle-heights-establishing.png",
+      "scope": "environment",
+      "approval": "creator-approved Middle Heights wide establishing illustration; visual geography only; incidental details not written canon"
     }
   ]
 }

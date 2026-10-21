@@ -34,3 +34,7 @@ World is the illustrated atlas; Lore is text-forward, with selective use of rele
 - Lore: text-first with contextual, minimal image reuse.
 
 Old artwork must not be placed on the live site merely because it remains in Git history. Character likeness and approved scene illustration do not establish incidental banner, emblem, document, building or meeting details as written canon.
+
+## Middle Heights establishing landscape (22 Oct 2026)
+
+Creator-approved image `Lanternlit City of the Misty Gorge.png` is published as `assets/images/districts/middle-heights-establishing.png` for the main World atlas Middle Heights section. The earlier approved portrait image remains in `assets/images/districts/middle-heights-neighborhood.png` as a supporting illustration, but not the main World establishing view. The new scene represents a visually approved cross-canyon residential setting; no incidental banners, lights, bridge designs or individual buildings are written canon.
