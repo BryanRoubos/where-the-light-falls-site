@@ -231,3 +231,7 @@
 .lore-landscape img{width:100%;height:auto;display:block;border:1px solid #baa98e;border-radius:3px}
 .lore-landscape figcaption{text-align:center;font:italic 14px/1.5 Georgia,serif;margin-top:10px;color:#75695a}
 @media(max-width:560px){.tile-with-image small,.tile-with-image h3,.tile-with-image p{margin-left:20px;margin-right:20px}}
+
+/* Crawlable static pages retain navigation on narrow screens without relying on JS. */
+.header .static-nav{display:flex;flex-wrap:wrap}
+@media(max-width:800px){.header:has(.static-nav){flex-wrap:wrap}.header .static-nav{position:static;display:flex;flex-wrap:wrap;padding:0;background:transparent;gap:12px}}
