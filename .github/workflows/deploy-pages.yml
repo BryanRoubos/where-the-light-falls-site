@@ -26,6 +26,7 @@ jobs:
         run: |
           node --check app.js
           node --check scripts/build-static.js
+          node --check scripts/copy-approved-images.js
           grep -q 'chapter-one.html' index.html
           grep -q 'reader-prose' chapter-one.html
           grep -q 'issues/1' feedback.html
@@ -35,7 +36,7 @@ jobs:
           mkdir -p _site/chapters _site/assets/images
           cp index.html chapter-one.html feedback.html styles.css app.js google6a72b1af88a0a393.html _site/
           cp chapters/chapter-one.md _site/chapters/
-          cp -R assets/images/. _site/assets/images/
+          node scripts/copy-approved-images.js
           node scripts/build-static.js
           node scripts/check-site.js
           touch _site/.nojekyll

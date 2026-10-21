@@ -1,0 +1,71 @@
+{
+  "project": "Where the Light Falls",
+  "policy": "Only these approved visual assets are published. New website artwork requires explicit creator approval; image details do not automatically establish written canon.",
+  "assets": [
+    {
+      "path": "assets/images/chapters/chapter-one-a-better-question.png",
+      "scope": "scene",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/chapters/chapter-one-not-enough.png",
+      "scope": "scene",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/chapters/chapter-one-well-the-knot-held.png",
+      "scope": "scene",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/characters/bram.png",
+      "scope": "character",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/characters/elias-varek.png",
+      "scope": "character",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/characters/mira-varek.png",
+      "scope": "character",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/characters/unnamed-workshop-figure.png",
+      "scope": "character",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/districts/deepwater-working-waterfront.png",
+      "scope": "environment",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/districts/middle-heights-neighborhood.png",
+      "scope": "environment",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/districts/upper-city-grand-reveal.png",
+      "scope": "environment",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/districts/upper-heights-to-upper-city.png",
+      "scope": "environment",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/scenes/maren-inspects-cargo.png",
+      "scope": "character",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    },
+    {
+      "path": "assets/images/scenes/upper-city-everyday-life.png",
+      "scope": "environment",
+      "approval": "creator-selected visual asset; incidental props are not novel canon"
+    }
+  ]
+}
