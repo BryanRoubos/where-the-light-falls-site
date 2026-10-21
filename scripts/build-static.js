@@ -18,7 +18,7 @@ function links(html) {
     .replace(/href="#\/"/g, 'href="index.html"')
     .replace(/href="\.\/#\/"/g, 'href="index.html"');
 }
-const nav = '<header class="header"><a class="brand" href="index.html">WHERE THE LIGHT FALLS</a><nav class="nav static-nav" aria-label="Main navigation"><a class="nav-feature" href="chapter-one.html">Read Chapter One</a><a href="discover.html">Start here</a><a href="world.html">World</a><a href="characters.html">Characters</a><a href="lore.html">Lore</a><a href="about.html">About</a><a href="feedback.html">Feedback</a></nav></header>';
+const nav = "<header class=\"header\"><a class=\"brand\" href=\"index.html\">WHERE THE LIGHT FALLS</a><nav class=\"nav static-nav desktop-nav\" aria-label=\"Main navigation\"><a href=\"world.html\">World</a><a href=\"characters.html\">Characters</a><a href=\"lore.html\">Lore</a><a href=\"about.html\">About</a><a class=\"nav-feature\" href=\"chapter-one.html\">Read Chapter One</a></nav><details class=\"mobile-nav\"><summary>Menu</summary><nav aria-label=\"Mobile navigation\"><a href=\"world.html\">World</a><a href=\"characters.html\">Characters</a><a href=\"lore.html\">Lore</a><a href=\"about.html\">About</a><a href=\"chapter-one.html\">Read Chapter One</a></nav></details></header>";
 const footer = '<footer class="footer"><span>© 2026 Bryan Roubos</span><span><a href="about.html">About the author</a> · <a href="chapter-one.html">Read Chapter One</a> · <a href="feedback.html">Reader feedback</a></span></footer>';
 const person = {
  '@context':'https://schema.org','@type':'Person','@id':url('about.html')+'#bryan',
@@ -29,9 +29,10 @@ const person = {
 const book = {'@context':'https://schema.org','@type':'Book','@id':url('index.html')+'#book',name:'Where the Light Falls',url:url('index.html'),genre:['Dark fantasy','Mystery'],inLanguage:'en',author:{'@id':person['@id']},description:'An original dark fantasy mystery novel in progress, set in a city divided by light and shadow.'};
 function write(name, title, description, body, extras={}) {
  const canonical=url(name);
- const jsonld=extras.schema?'<script type="application/ld+json">'+JSON.stringify({'@context':'https://schema.org','@graph':[person,book]})+'</script>':'';
+ const jsonld=extras.schema?'<script type="application/ld+json">'+JSON.stringify({'@context':'https://schema.org','@graph':extras.schema==='book'?[book,person]:[person,book]})+'</script>':'';
  const verification="";
- const image=url('assets/images/districts/deepwater-working-waterfront.png');
+ const shareImages={'world.html':'assets/images/districts/upper-city-grand-reveal.png','lore/mira.html':'assets/images/characters/mira-varek.png','lore/maren.html':'assets/images/scenes/maren-inspects-cargo.png','lore/bram.html':'assets/images/characters/bram.png','lore/unnamed-figure.html':'assets/images/characters/unnamed-workshop-figure.png','lore/upper-city.html':'assets/images/scenes/upper-city-everyday-life.png'};
+ const image=url(shareImages[name]||'assets/images/districts/deepwater-working-waterfront.png');
  const html='<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'+
  '<title>'+esc(title)+'</title>'+(name.startsWith('lore/')?'<base href="../">':'')+'<meta name="description" content="'+esc(description)+'"><meta name="theme-color" content="#111a1f">\n'+
  '<link rel="canonical" href="'+canonical+'">\n'+
@@ -42,11 +43,11 @@ function write(name, title, description, body, extras={}) {
  fs.writeFileSync(path.join(site,name),html);
 }
 const home = page['/']().replace('<div id="home-character-gallery" class="character-gallery"></div>','<div id="home-character-gallery" class="character-gallery">'+entries.filter(e=>e.type==='Character').map(characterCard).join('')+'</div>').replace('<p class="hero-note">','<p class="hero-note">By <a href="about.html">Bryan Roubos</a> · ');
-write('index.html','Where the Light Falls — Dark Fantasy Novel by Bryan Roubos','Where the Light Falls is an original dark fantasy mystery novel by Bryan Roubos. Meet Elias Varek, explore Deepwater and read Chapter One.',home);
+write('index.html','Where the Light Falls — Dark Fantasy Novel by Bryan Roubos','Where the Light Falls is an original dark fantasy mystery novel by Bryan Roubos. Meet Elias Varek, explore Deepwater and read Chapter One.',home,{schema:'book'});
 const sections=[
  ['discover','Discover the World','An introduction to the canyon metropolis, its people, geography and history.'],
  ['world','The World','Explore the city, the Deepwater river and the divided districts of Where the Light Falls.'],
- ['characters','Characters','Meet Elias Varek, Mira, Maren, Bram and an enigmatic unnamed figure from Bryan Roubos’s dark fantasy novel Where the Light Falls.'],
+ ['characters','Characters','Meet Elias Varek, Mira, Maren, Bram and an unnamed figure from the original dark fantasy novel Where the Light Falls.'],
  ['chronology','Chronology','How the crossings, trade routes and city districts of Where the Light Falls developed.'],
  ['lore','Lore Archive','Explore the public lore archive for Where the Light Falls, including its people, history and geography.']
 ];
@@ -56,7 +57,7 @@ for(const [slug,title,description] of sections){
  write(slug+'.html',title+' — Where the Light Falls',description,body);
 }
 for(const e of entries) write('lore/'+e.id+'.html',e.title+' — Where the Light Falls Lore',e.summary+' Explore the public lore of Where the Light Falls.',article(e));
-const bio='<section class="shell section"><div class="kicker">ABOUT THE AUTHOR</div><h1 class="title">Bryan Roubos</h1><div class="paper"><h2>About the story</h2><p>I’m Bryan Roubos, the author and creator of <em>Where the Light Falls</em>, an original dark fantasy mystery in development.</p><p>The story follows Elias Varek through a vast canyon metropolis as he searches for answers about his missing sister. I’m building its world, characters and illustrations alongside the novel. My illustrations begin with pencil-and-paper concepts and develop through AI-assisted visual exploration.</p><p><a href="chapter-one.html">Read Chapter One</a> · <a href="https://github.com/BryanRoubos" rel="author">Bryan Roubos on GitHub</a></p></div></section>';
+const bio='<section class="shell section"><div class="kicker">ABOUT THE AUTHOR</div><h1 class="title">Bryan Roubos</h1><div class="paper"><h2>About the story</h2><p>I’m Bryan Roubos, the author and creator of <em>Where the Light Falls</em>, an original dark fantasy mystery in development.</p><p>The story follows Elias Varek as he searches for answers about his missing sister in a vast canyon metropolis. Chapter One is available to read here. </p><p><a href="chapter-one.html">Read Chapter One</a> · <a href="https://github.com/BryanRoubos" rel="author">Bryan Roubos on GitHub</a></p></div></section>';
 write('about.html','About Bryan Roubos — Author of Where the Light Falls','About Bryan Roubos, author and creator of the dark fantasy mystery novel Where the Light Falls.',bio,{schema:true});
 const files=['index.html',...sections.map(s=>s[0]+'.html'),'about.html','chapter-one.html','feedback.html',...entries.map(e=>'lore/'+e.id+'.html')];
 fs.writeFileSync(path.join(site,'sitemap.xml'),'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+files.map(f=>'<url><loc>'+url(f)+'</loc></url>').join('\n')+'\n</urlset>\n');

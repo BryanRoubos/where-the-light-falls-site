@@ -305,3 +305,20 @@
 .character-card-copy h3{font-size:clamp(18px,5vw,24px);overflow-wrap:anywhere}
 }
 @media(max-width:390px){.story-hero .canyon-visual{width:100%;max-width:none}.header .static-nav a{padding-inline:10px}}
+
+/* Curated editorial design: 2026 final visual selection. */
+.home-paths .feature-tile{padding:28px;min-height:240px}
+.home-paths .feature-tile .number,.home-paths .feature-tile h3,.home-paths .feature-tile p,.home-paths .feature-tile .tile-link{margin-left:0;margin-right:0}
+.home-paths .feature-tile h3{margin-top:16px}
+.atlas-intro{max-width:700px}
+.atlas-place{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(250px,.8fr);gap:clamp(20px,4vw,64px);align-items:center;margin:36px 0 70px}
+.atlas-place figure{min-width:0;margin:0}
+.atlas-place figure img{display:block;width:100%;height:auto;max-height:640px;object-fit:contain}
+.atlas-place figcaption{font:italic 14px/1.5 Georgia,serif;text-align:center;color:#b9bcae;margin-top:12px}
+.atlas-place .atlas-text h2{font-size:clamp(29px,3.5vw,48px);line-height:1.12;margin:15px 0}
+.atlas-place .atlas-text p{font-size:17px;line-height:1.7;color:#cdd5ce}
+.atlas-place .atlas-text a{color:#e3bf8e}
+.atlas-place:nth-of-type(even){direction:rtl}
+.atlas-place:nth-of-type(even)>*{direction:ltr}
+@media(max-width:900px){.atlas-place{grid-template-columns:1fr;gap:17px;margin:35px 0 60px}.atlas-place:nth-of-type(even){direction:ltr}}
+@media(max-width:640px){.home-paths .story-grid{grid-template-columns:1fr}.home-paths .feature-tile{min-height:0;padding:23px}.atlas-place .atlas-text p{font-size:16px}.atlas-place figure img{max-height:none}}

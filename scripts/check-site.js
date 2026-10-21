@@ -35,7 +35,7 @@ for(const f of htmlFiles){
   if(!fs.existsSync(check)) errors.push(rel+': missing '+v+' -> '+target);
  }
 }
-for(const p of ['index.html','world.html','characters.html','lore.html','lore/leader.html','lore/elias.html','about.html','chapter-one.html','sitemap.xml','robots.txt']){
+for(const p of ['index.html','world.html','characters.html','lore.html','lore/unnamed-figure.html','lore/elias.html','about.html','chapter-one.html','sitemap.xml','robots.txt']){
  if(!fs.existsSync(path.join(root,p)))errors.push('missing output '+p);
 }
 const map=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');

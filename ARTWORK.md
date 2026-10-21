@@ -19,8 +19,18 @@ Only the nine newly selected world/character/scenes, other separately selected c
 
 Current Deepwater homepage image: `assets/images/districts/deepwater-working-waterfront.png` (original title: `Mistbound Cliffside Harbour.png`).
 
-Public lore cards and articles reuse newly selected illustrations when they clarify geography, community, trade or access. No illustration automatically establishes incidental props or specific historical events as written canon.
+World is the illustrated atlas; Lore is text-forward, with selective use of relevant illustrations. No illustration automatically establishes incidental props or specific historical events as written canon.
 
 ## Unnamed character portrait
 
-`assets/images/characters/unnamed-leader.png` comes from `Guildhall Workshop Conversation.png`. It belongs to the unnamed character profile, not to the generic Lower City political-tensions article or district illustration gallery. Public text is intentionally spoiler-safe; the character’s name, role, workshop event and symbols are not established by the image.
+`assets/images/characters/unnamed-workshop-figure.png` comes from `Guildhall Workshop Conversation.png`. It belongs to the unnamed character profile, not to the generic Lower City political-tensions article or district illustration gallery. Public text is intentionally spoiler-safe; the character’s name, role, workshop event and symbols are not established by the image.
+
+## Curated primary placements
+
+- Homepage: selected Mistbound Cliffside Harbour waterfront.
+- World atlas: canyon city overlook, Upper City market, Upper Heights to Upper City main gate approach, selected Middle Heights quarter, and Deepwater waterfront.
+- Characters: existing approved Elias art, selected Mira, Maren, Bram and unnamed workshop figure.
+- Chapter One: its three approved illustrations remain unchanged and uncropped.
+- Lore: text-first with contextual, minimal image reuse.
+
+Old artwork must not be placed on the live site merely because it remains in Git history. Character likeness and approved scene illustration do not establish incidental banner, emblem, document, building or meeting details as written canon.
