@@ -34,11 +34,11 @@ function write(name, title, description, body, extras={}) {
  const verification=name==='index.html'?'<meta name="google-site-verification" content="">':'';
  const image=url('assets/images/deepwater-city-below.png');
  const html='<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'+
- '<title>'+esc(title)+'</title><meta name="description" content="'+esc(description)+'"><meta name="theme-color" content="#111a1f">\n'+
+ '<title>'+esc(title)+'</title>'+(name.startsWith('lore/')?'<base href="../">':'')+'<meta name="description" content="'+esc(description)+'"><meta name="theme-color" content="#111a1f">\n'+
  '<link rel="canonical" href="'+canonical+'">\n'+
  '<meta property="og:type" content="'+(extras.schema?'profile':'website')+'"><meta property="og:site_name" content="Where the Light Falls"><meta property="og:title" content="'+esc(title)+'"><meta property="og:description" content="'+esc(description)+'"><meta property="og:url" content="'+canonical+'"><meta property="og:image" content="'+image+'">\n'+
  '<meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="styles.css">'+verification+jsonld+'</head><body>\n'+
- '<a class="skip" href="#main">Skip to main content</a>'+nav+'<main id="main">'+links(body)+'</main>'+footer+'</body></html>';
+ '<a class="skip" href="'+(name.startsWith('lore/')?name+'#main':'#main')+'">Skip to main content</a>'+nav+'<main id="main">'+links(body)+'</main>'+footer+'</body></html>';
  fs.mkdirSync(path.dirname(path.join(site,name)),{recursive:true});
  fs.writeFileSync(path.join(site,name),html);
 }
