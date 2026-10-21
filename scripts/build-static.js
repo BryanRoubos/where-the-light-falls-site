@@ -31,7 +31,7 @@ function write(name, title, description, body, extras={}) {
  const canonical=url(name);
  const jsonld=extras.schema?'<script type="application/ld+json">'+JSON.stringify({'@context':'https://schema.org','@graph':[person,book]})+'</script>':'';
  const verification="";
- const image=url('assets/images/deepwater-city-below.png');
+ const image=url('assets/images/districts/deepwater-working-waterfront.png');
  const html='<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'+
  '<title>'+esc(title)+'</title>'+(name.startsWith('lore/')?'<base href="../">':'')+'<meta name="description" content="'+esc(description)+'"><meta name="theme-color" content="#111a1f">\n'+
  '<link rel="canonical" href="'+canonical+'">\n'+
@@ -63,7 +63,7 @@ fs.writeFileSync(path.join(site,'sitemap.xml'),'<?xml version="1.0" encoding="UT
 fs.writeFileSync(path.join(site,'robots.txt'),'User-agent: *\nAllow: /\nSitemap: '+url('sitemap.xml')+'\n');
 function retrofit(filename,title,description) {
  let html=fs.readFileSync(path.join(site,filename),'utf8');
- const meta='<link rel="canonical" href="'+url(filename)+'"><meta property="og:url" content="'+url(filename)+'"><meta property="og:image" content="'+url('assets/images/deepwater-city-below.png')+'"><meta property="og:site_name" content="Where the Light Falls"><meta name="twitter:card" content="summary_large_image">';
+ const meta='<link rel="canonical" href="'+url(filename)+'"><meta property="og:url" content="'+url(filename)+'"><meta property="og:image" content="'+url('assets/images/districts/deepwater-working-waterfront.png')+'"><meta property="og:site_name" content="Where the Light Falls"><meta name="twitter:card" content="summary_large_image">';
  html=html.replace('</head>',meta+'</head>').replace(/(?:\.\/)?#\//g,'index.html').replace(/© 2026 (?:Where the Light Falls|WHERE THE LIGHT FALLS)[^<]*/g,'© 2026 Bryan Roubos · ').replace('</nav>','<a href="about.html">About</a></nav>');
  if(!html.includes('property="og:description"'))html=html.replace('</head>','<meta property="og:description" content="'+esc(description)+'"><meta property="og:title" content="'+esc(title)+'"><meta property="og:type" content="website"></head>');
  fs.writeFileSync(path.join(site,filename),html);
