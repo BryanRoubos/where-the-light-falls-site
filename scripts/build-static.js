@@ -42,7 +42,7 @@ function write(name, title, description, body, extras={}) {
  fs.mkdirSync(path.dirname(path.join(site,name)),{recursive:true});
  fs.writeFileSync(path.join(site,name),html);
 }
-const home = page['/']().replace('<div id="home-character-gallery" class="character-gallery"></div>','<div id="home-character-gallery" class="character-gallery">'+entries.filter(e=>e.type==='Character').map(characterCard).join('')+'</div>').replace('<p class="hero-note">','<p class="hero-note">By <a href="about.html">Bryan Roubos</a> · ');
+const home = page['/']().replace('<div id="home-character-gallery" class="character-gallery"></div>','<div id="home-character-gallery" class="character-gallery">'+entries.filter(e=>e.type==='Character').map(characterCard).join('')+'</div>');
 write('index.html','Where the Light Falls — Dark Fantasy Novel by Bryan Roubos','Where the Light Falls is an original dark fantasy mystery novel by Bryan Roubos. Meet Elias Varek, explore Deepwater and read Chapter One.',home,{schema:'book'});
 const sections=[
  ['discover','Discover the World','An introduction to the canyon metropolis, its people, geography and history.'],
