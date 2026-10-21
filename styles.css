@@ -446,3 +446,32 @@
  .story-hero .actions{gap:10px}
  .story-hero .canyon-visual-label{padding:43px 17px 13px}
 }
+
+/* The approved Middle Heights image is a portrait scene, not a district panorama.
+   Treat it as an intimate close-up, preserving its natural framing. */
+.atlas-place-portrait figure{
+  width:min(100%,440px);
+  justify-self:center;
+  padding:12px;
+  border:1px solid #b9a27e42;
+  border-radius:8px;
+  background:linear-gradient(145deg,#26383c,#17262b);
+}
+.atlas-place-portrait figure img{
+  display:block;
+  width:auto;
+  max-width:100%;
+  height:auto;
+  max-height:480px;
+  margin-inline:auto;
+  object-fit:contain;
+}
+.atlas-place-portrait .atlas-text{max-width:440px}
+@media(max-width:900px){
+  .atlas-place-portrait figure{width:min(100%,440px)}
+  .atlas-place-portrait figure img{max-height:510px}
+}
+@media(max-width:600px){
+  .atlas-place-portrait figure{width:min(100%,380px);padding:8px}
+  .atlas-place-portrait figure img{max-height:none;width:100%;height:auto}
+}
