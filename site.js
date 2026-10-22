@@ -7,6 +7,19 @@ function legacyRoute(){
 }
 legacyRoute();
 window.addEventListener('hashchange',legacyRoute);
+const mobileMenu=document.querySelector('.mobile-nav');
+if(mobileMenu){
+ document.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&mobileMenu.open){
+   mobileMenu.open=false;
+   mobileMenu.querySelector('summary').focus();
+   event.preventDefault();
+  }
+ });
+ document.addEventListener('click',event=>{
+  if(mobileMenu.open&&!mobileMenu.contains(event.target))mobileMenu.open=false;
+ });
+}
 const search=document.querySelector('.archive-search');
 if(search){
  search.hidden=false;

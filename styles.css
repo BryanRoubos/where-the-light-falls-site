@@ -594,6 +594,11 @@ main>.shell.section>.title{max-width:850px;letter-spacing:-.035em;text-wrap:bala
 @media print{.header,.mobile-nav,.chapter-next{display:none!important}}
 .feedback-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start}
 .feedback-send-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
+.feedback-send-actions .btn:not(.primary){background:transparent;color:#dfc49c}
+.breadcrumbs a{text-decoration:underline;text-underline-offset:4px}
+.lore-landscape figcaption{color:#665744}
+.character-card h2{margin:0;font:normal clamp(18px,5vw,24px)/1.2 Georgia,serif;overflow-wrap:anywhere}
+.event h2{margin:0;font:bold 21px/1.7 Georgia,serif;letter-spacing:normal}
 #feedback-provider{width:100%;padding:12px;background:#10191d;color:#eee6d6;border:1px solid #bfa782;font:16px/1.6 system-ui}
 #feedback-provider:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .character-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
