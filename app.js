@@ -43,10 +43,10 @@ const storyTeasers={
   "political-tensions": "Shared streets and unequal power leave people with very different ideas of justice.",
   "trade-economy": "The districts depend on one another, even when opportunity is unevenly shared.",
   "arch": "A simple bronze coin carries an image everyone in the city recognizes.",
-  "elias": "He knows every difficult stair in the Lower City. Finding his sister is harder.",
-  "mira": "Curious about the world beyond the canyon, she wanted to make her own choices.",
-  "maren": "A young trader with sharp instincts and bigger ambitions for her family business.",
-  "bram": "The river has taught him patience. Sharing responsibility is another matter.",
+  "elias": "Two years after his sister vanished, Elias is still searching. He has never known how to stop.",
+  "mira": "Mira loved her brother. She just wanted a life that was hers to choose.",
+  "maren": "Maren has plans for her family's trading business. Convincing her father to trust them is another matter.",
+  "bram": "Bram has spent years keeping his family business afloat. Letting Maren help steer it doesn't come easily.",
   "unnamed-figure": "One face in a working-city crowd. The rest of his story remains to be discovered."
 };
 const characterImage=(e)=>portraits[e.id]?`<img class="character-image" src="${portraits[e.id]}" alt="Illustration of ${esc(e.title)}" loading="lazy" decoding="async">`:'<div class="character-image character-image-placeholder" aria-hidden="true"></div>';
