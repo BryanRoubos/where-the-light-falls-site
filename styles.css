@@ -475,3 +475,56 @@
   .atlas-place-portrait figure{width:min(100%,380px);padding:8px}
   .atlas-place-portrait figure img{max-height:none;width:100%;height:auto}
 }
+
+/* Homepage only: a quiet literary opening, then the approved city reveal. */
+.literary-home{background:radial-gradient(ellipse at 50% 5%,#b58b4214,transparent 36%),#10191d;color:#eee6d6}
+.literary-home .shell{padding-left:24px;padding-right:24px}
+.literary-home h2{font-weight:normal;font-size:clamp(32px,4vw,48px);line-height:1.2;letter-spacing:-.025em;text-wrap:balance}
+.literary-home h2 em{color:#cdb38b;font-weight:normal}
+.opening{text-align:center;padding-top:clamp(44px,6vw,76px);padding-bottom:54px}
+.opening h1{font-weight:normal;font-size:clamp(57px,7.2vw,90px);line-height:.99;letter-spacing:-.045em;margin:25px 0}
+.opening h1 em{font-weight:normal;color:#d9bb8a}
+.opening-hook{font-size:clamp(20px,2.2vw,26px);margin:0 0 14px}
+.opening-premise{color:#bfc7c3;font-size:17px;line-height:1.7;margin:0 auto;max-width:52ch}
+.opening .actions{justify-content:center;margin-top:25px}
+.literary-home .btn{min-height:48px;display:inline-flex;gap:18px;align-items:center;justify-content:center}
+.literary-home .btn:hover{background:#e0c79e;color:#10191d}
+.reveal-heading{display:flex;justify-content:space-between;align-items:center;gap:30px;margin:20px 0 25px}
+.reveal-heading h2{font-size:clamp(25px,3vw,36px);margin:0}
+.city-reveal figure{margin:0;border:1px solid #cdb38b55;background:#18252a;padding:8px}
+.city-reveal figure img{display:block;width:100%;height:auto}
+.city-reveal figure a{display:block}
+.city-reveal figcaption{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:15px 12px 8px;font:12px/1.6 system-ui;letter-spacing:.06em;color:#d5c5aa}
+.city-reveal figcaption a{display:inline;text-underline-offset:5px}
+.reveal-note{font-size:16px;color:#bfc7c3;max-width:65ch;margin:22px auto 0;text-align:center}
+.elias-introduction{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:clamp(36px,7vw,100px);align-items:center;margin-top:100px;margin-bottom:100px}
+.elias-introduction figure{margin:0;width:100%;max-width:350px;justify-self:center;padding:8px;border:1px solid #cdb38b55;background:#18252a}
+.elias-introduction img{display:block;width:100%;height:auto}
+.elias-introduction h2{margin:18px 0 25px}
+.elias-introduction p:not(.kicker){max-width:47ch;color:#bfc7c3;font-size:18px}
+.quiet-link{display:inline-block;color:#dfc49c;font:600 14px/1.7 system-ui;text-underline-offset:6px;padding:10px 0}
+.novel-excerpt{border-top:1px solid #cdb38b40;border-bottom:1px solid #cdb38b40;padding-top:65px;padding-bottom:65px;text-align:center}
+.novel-excerpt h2{margin:18px 0 35px}
+.novel-excerpt blockquote{text-align:left;max-width:620px;margin:0 auto 25px;font-size:clamp(19px,2.1vw,23px);line-height:1.85;color:#e0d8c9}
+.novel-excerpt blockquote p{margin:0 0 22px}
+.novel-excerpt blockquote p:first-child:first-letter{float:left;font-size:3.5em;line-height:1;padding:8px 10px 0 0;color:#d9bb8a}
+.continuation{text-align:center;padding-top:70px;padding-bottom:70px}
+.continuation h2{margin:16px 0}
+.continuation>p:not(.kicker){max-width:53ch;margin:0 auto;color:#bfc7c3}
+.continuation .actions{justify-content:center;align-items:center;gap:30px;margin:25px 0}
+.continuation .continuation-author{font:13px/1.7 system-ui}
+@media(max-width:650px){
+ .opening{padding-top:38px;padding-bottom:30px}
+ .opening .kicker{font-size:10px;letter-spacing:.14em}
+ .opening-premise br{display:none}
+ .opening .actions{gap:12px}
+ .reveal-heading{display:block;margin-top:25px}
+ .reveal-heading .kicker{margin-bottom:18px}
+ .city-reveal figure{padding:4px}
+ .city-reveal figcaption{padding:12px 7px 8px;font-size:11px}
+ .elias-introduction{grid-template-columns:1fr;margin-top:55px;margin-bottom:55px;gap:28px}
+ .elias-introduction figure{max-width:280px}
+ .elias-introduction h2{margin:14px 0 20px}
+ .novel-excerpt{padding-top:45px;padding-bottom:45px}
+ .continuation{padding-top:45px;padding-bottom:45px}
+}

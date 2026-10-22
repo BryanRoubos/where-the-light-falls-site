@@ -27,13 +27,17 @@ World is the illustrated atlas; Lore is text-forward, with selective use of rele
 
 ## Curated primary placements
 
-- Homepage: selected Mistbound Cliffside Harbour waterfront.
+- Homepage: contained Upper City Grand Reveal, followed by the approved Elias portrait (22 Oct 2026 redesign).
 - World atlas: canyon city overlook, Upper City market, Upper Heights to Upper City main gate approach, selected Middle Heights quarter, and Deepwater waterfront.
 - Characters: existing approved Elias art, selected Mira, Maren, Bram and unnamed workshop figure.
 - Chapter One: its three approved illustrations remain unchanged and uncropped.
 - Lore: text-first with contextual, minimal image reuse.
 
 Old artwork must not be placed on the live site merely because it remains in Git history. Character likeness and approved scene illustration do not establish incidental banner, emblem, document, building or meeting details as written canon.
+
+## Homepage delivery variants (22 Oct 2026)
+
+The `-home.webp` and `-home-small.webp` files are uncropped delivery copies of the approved Upper City Grand Reveal and Elias portrait, not new artwork. Their manifest entries identify the approved PNG source. The city variants are 1672 and 800 pixels wide; Elias is 640 pixels wide. They retain the full composition and use WebP quality 85. Original PNGs and Chapter One illustrations remain unchanged. The allowlisted copy pipeline validates both PNG and WebP paths and requires derivative source entries to reference approved originals.
 
 ## Middle Heights establishing landscape (22 Oct 2026)
 

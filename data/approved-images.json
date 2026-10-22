@@ -71,6 +71,24 @@
       "path": "assets/images/districts/middle-heights-establishing.png",
       "scope": "environment",
       "approval": "creator-approved Middle Heights wide establishing illustration; visual geography only; incidental details not written canon"
+    },
+    {
+      "path": "assets/images/districts/upper-city-grand-reveal-home.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/upper-city-grand-reveal.png",
+      "approval": "Uncropped, resized WebP of creator-approved artwork; no new visual content"
+    },
+    {
+      "path": "assets/images/districts/upper-city-grand-reveal-home-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/upper-city-grand-reveal.png",
+      "approval": "Uncropped, resized WebP of creator-approved artwork; no new visual content"
+    },
+    {
+      "path": "assets/images/characters/elias-varek-home.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/characters/elias-varek.png",
+      "approval": "Uncropped, resized WebP of creator-approved artwork; no new visual content"
     }
   ]
 }

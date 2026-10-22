@@ -17,7 +17,7 @@ A spoiler-conscious website for an original, novel-first dark fantasy mystery. R
 - `feedback.html` — spoiler-aware feedback invitation that links to a GitHub issue (comments require a GitHub account and are public).
 - `.github/workflows/deploy-pages.yml` — allowlisted GitHub Pages deployment from `main`.
 
-The reader pages use semantic HTML, a narrow reading column, adjustable font size, a night-reading option, visible focus states, and mobile layouts. The homepage now uses the newly selected Deepwater working waterfront illustration (Mistbound Cliffside Harbour), not the retired previous hero. Lore overview cards and selected articles feature the approved new images; the three approved Chapter One illustrations remain unchanged. The three approved Chapter One illustrations remain unchanged.
+The reader pages use semantic HTML, a narrow reading column, adjustable font size, a night-reading option, visible focus states, and mobile layouts. The homepage uses a short literary opening, a contained approved Upper City reveal, the approved Elias portrait, and an exact Chapter One excerpt. Responsive WebP delivery copies are listed with their approved PNG sources in the artwork manifest. Lore overview cards and selected articles feature the approved new images; the three approved Chapter One illustrations remain unchanged. The three approved Chapter One illustrations remain unchanged.
 
 ## Deployment
 

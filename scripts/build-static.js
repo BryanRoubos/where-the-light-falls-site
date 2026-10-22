@@ -31,7 +31,7 @@ function write(name, title, description, body, extras={}) {
  const canonical=url(name);
  const jsonld=extras.schema?'<script type="application/ld+json">'+JSON.stringify({'@context':'https://schema.org','@graph':extras.schema==='book'?[book,person]:[person,book]})+'</script>':'';
  const verification="";
- const shareImages={'world.html':'assets/images/districts/upper-city-grand-reveal.png','lore/mira.html':'assets/images/characters/mira-varek.png','lore/maren.html':'assets/images/scenes/maren-inspects-cargo.png','lore/bram.html':'assets/images/characters/bram.png','lore/unnamed-figure.html':'assets/images/characters/unnamed-workshop-figure.png','lore/upper-city.html':'assets/images/scenes/upper-city-everyday-life.png'};
+ const shareImages={'index.html':'assets/images/districts/upper-city-grand-reveal-home.webp','world.html':'assets/images/districts/upper-city-grand-reveal.png','lore/mira.html':'assets/images/characters/mira-varek.png','lore/maren.html':'assets/images/scenes/maren-inspects-cargo.png','lore/bram.html':'assets/images/characters/bram.png','lore/unnamed-figure.html':'assets/images/characters/unnamed-workshop-figure.png','lore/upper-city.html':'assets/images/scenes/upper-city-everyday-life.png'};
  const image=url(shareImages[name]||'assets/images/districts/deepwater-working-waterfront.png');
  const html='<!doctype html>\n<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">\n'+
  '<title>'+esc(title)+'</title>'+(name.startsWith('lore/')?'<base href="../">':'')+'<meta name="description" content="'+esc(description)+'"><meta name="theme-color" content="#111a1f">\n'+
