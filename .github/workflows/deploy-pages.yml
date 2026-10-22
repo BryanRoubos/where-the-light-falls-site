@@ -28,6 +28,7 @@ jobs:
           node --check scripts/build-static.js
           node --check scripts/copy-approved-images.js
           node --check scripts/check-home.js
+          node --check site.js
           grep -q 'chapter-one.html' index.html
           grep -q 'reader-prose' chapter-one.html
           grep -q 'issues/1' feedback.html
@@ -35,12 +36,13 @@ jobs:
         shell: bash
         run: |
           mkdir -p _site/chapters _site/assets/images
-          cp index.html chapter-one.html feedback.html styles.css app.js google6a72b1af88a0a393.html _site/
+          cp index.html chapter-one.html feedback.html styles.css app.js site.js google6a72b1af88a0a393.html _site/
           cp chapters/chapter-one.md _site/chapters/
           node scripts/copy-approved-images.js
           node scripts/build-static.js
           node scripts/check-site.js
           node scripts/check-home.js
+          node scripts/check-reader-site.js
           touch _site/.nojekyll
           test -s _site/assets/images/chapters/chapter-one-not-enough.png
           test -s _site/assets/images/chapters/chapter-one-well-the-knot-held.png

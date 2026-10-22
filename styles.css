@@ -528,3 +528,71 @@
  .novel-excerpt{padding-top:45px;padding-bottom:45px}
  .continuation{padding-top:45px;padding-bottom:45px}
 }
+
+/* Shared reader-site finish: consistent type, responsive framing and clear paths. */
+[hidden]{display:none!important}
+main{min-height:60vh}
+main:focus{outline:none}
+main>.shell.section{padding:clamp(42px,6vw,76px) 24px}
+main>.shell.section>.title{max-width:850px;letter-spacing:-.035em;text-wrap:balance}
+.page-intro{max-width:65ch;font-size:19px;line-height:1.8;color:#c1c6c3}
+.static-nav a[aria-current=page],.mobile-nav a[aria-current=page]{color:#e9cda3;text-decoration:underline;text-underline-offset:7px}
+.btn{min-height:46px;line-height:1.5}
+.btn:hover{filter:brightness(1.1)}
+.footer{line-height:2;gap:12px 25px}
+.footer span:last-child{max-width:800px}
+.atlas-jumps{display:flex;flex-wrap:wrap;gap:12px 22px;margin:30px 0 45px;padding:18px 0;border-block:1px solid #cdb38b40;font:14px/1.8 system-ui;color:#dfc49c}
+.atlas-place{scroll-margin-top:100px}
+.atlas-place figure img{height:auto;object-fit:contain}
+.atlas-place figure{background:#16232a;border:1px solid #cdb38b40;padding:7px}
+.atlas-text p{max-width:45ch}
+.character-gallery{gap:28px}
+.character-card{background:#18262b;border-color:#cdb38b40;overflow:hidden}
+.character-card .character-image{height:340px;max-height:none;object-fit:contain;background:#10191d;object-position:center}
+.character-card-copy p{line-height:1.7}
+.character-card:hover,.tile:hover{box-shadow:0 8px 24px #0003}
+.lore-category{margin-top:48px}
+.lore-category .tile{display:flex;flex-direction:column}
+.lore-category .tile .tile-action{margin-top:auto;padding-top:20px}
+.archive-search{padding:24px;background:#18262b;border:1px solid #cdb38b50;margin:32px 0}
+.archive-search label,#feedback-draft label{display:block;font:600 14px/1.8 system-ui;margin-bottom:10px;color:#e8d4b4}
+.archive-search input,#feedback-draft input,#feedback-draft textarea{width:100%;font:16px/1.6 system-ui;padding:12px;border:1px solid #bfa782;background:#10191d;color:#eee6d6;border-radius:0}
+.archive-search p{font:14px/1.6 system-ui;color:#bfc7c3;margin:12px 0 0}
+.lore-entry{padding:30px 24px 10px}
+.breadcrumbs{font:13px/1.8 system-ui;color:#cdb38b;overflow-wrap:anywhere}
+.lore-entry .paper{margin-top:25px;max-width:850px}
+.lore-entry .paper>p{line-height:1.85}
+.lore-entry .paper .lore-portrait{object-fit:contain;max-height:500px;width:auto;max-width:100%;height:auto;background:#dfd4c1}
+.read-next{border-top:1px solid #9d8b7066;margin-top:30px;padding-top:15px}
+.entry-guide section{border:1px solid #cdb38b40;background:#18262b}
+.feedback-shell{padding-inline:24px}
+.feedback-panel details summary,.feedback-aside details summary{cursor:pointer;line-height:1.7;min-height:44px;padding:8px 0;text-decoration:underline;text-underline-offset:5px}
+.feedback-panel ol{padding-left:24px}
+#feedback-draft{margin-top:25px}
+#feedback-draft input,#feedback-draft textarea{margin-bottom:20px}
+#feedback-draft button{cursor:pointer}
+#draft-status{font:13px/1.7 system-ui;color:#e8d4b4}
+.feedback-aside a{overflow-wrap:anywhere}
+.chapter-next{font-size:16px;line-height:1.9}
+.chapter-next a{text-underline-offset:4px}
+.night-reader .chapter-next a{color:#dfc49c}
+.reader-prose .chapter-illustration img{height:auto}
+.reading-page .header{position:relative}
+.reading-page .reader-intro h1{font-style:italic}
+.reading-page .reader-intro{background:radial-gradient(ellipse at top,#cdb38b25,transparent 65%)}
+.feedback-shell>.title{font-weight:normal}
+@media(max-width:700px){
+ .character-card .character-image{height:360px}
+ .atlas-jumps{gap:10px 18px;margin-bottom:30px}
+ .feedback-shell{padding-top:42px;padding-bottom:48px}
+ .feedback-lead{font-size:18px}
+ .lore-entry .paper{margin-inline:0;padding:27px 22px}
+ .lore-entry{padding-inline:18px}
+ .archive-search{padding:20px}
+ .breadcrumbs{font-size:12px}
+}
+@media print{.header,.mobile-nav,.chapter-next{display:none!important}}
+.feedback-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start}
+.character-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media(max-width:800px){.feedback-layout{grid-template-columns:1fr}.character-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.character-gallery{grid-template-columns:1fr}.character-card .character-image{height:auto;max-height:480px;width:100%;object-fit:contain}.character-card-copy{padding:24px}}

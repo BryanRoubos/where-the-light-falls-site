@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#111a1f">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Read Chapter One — Where the Light Falls">
-<meta property="og:description" content="A sister missing for two years. A city divided by light and shadow. An impossible entry in a river-trading record. Read the first chapter.">
+<meta property="og:description" content="A sister missing for two years. A city divided by light and shadow. Begin with an ordinary working day in the Lower City.">
 <title>Read Chapter One · Where the Light Falls</title>
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -24,10 +24,10 @@
 <p class="kicker">Book One · Chapter One</p>
 <h1>Where the Light Falls</h1>
 <p class="reader-subtitle">Chapter One</p>
-<p class="reader-deck">A missing sister. A city shaped by its shadows. A record that should not exist.</p>
+<p class="reader-deck">A missing sister. A city shaped by its shadows. An ordinary working day in the Lower City.</p>
 <p class="reader-meta">An original novel in development · Approx. 15–20 minutes</p>
 </div>
-<div class="reading-tools" aria-label="Reading preferences">
+<div class="reading-tools" aria-label="Reading preferences" hidden>
 <span class="reading-tools-label">Reading settings</span>
 <div class="reading-tool-actions">
 <button id="font-smaller" type="button" aria-label="Decrease chapter font size">A−</button>
@@ -266,21 +266,25 @@
 <p class="kicker">End of Chapter One</p>
 <h2>Would you keep reading?</h2>
 <p>Your reactions matter while this story is taking shape. Tell me what caught your attention, what felt confusing, and whether you want to know what Elias finds next.</p>
-<div class="actions"><a href="feedback.html" class="btn primary">Tell me what you think →</a><a href="./#/" class="btn">Explore the world</a></div>
-<p class="reader-disclaimer">Where the Light Falls is an original novel I'm writing. This chapter is part of a work in progress, and I'd love to hear what you think.</p>
+<div class="actions"><a href="feedback.html" class="btn primary">Tell me what you think →</a><a href="world.html" class="btn">Explore the world</a></div>
+<p class="chapter-next"><a href="lore/mira.html">Meet Mira</a> · <a href="mailto:roubos@proton.me?subject=Where%20the%20Light%20Falls%20chapter%20updates">Ask Bryan about future chapters</a></p><p class="reader-disclaimer">Where the Light Falls is an original novel I'm writing. This chapter is part of a work in progress, and I'd love to hear what you think.</p>
 </div>
 </div>
 </main>
 <footer class="footer">© 2026 Where the Light Falls · <a href="./#/">Home</a> · <a href="feedback.html">Reader feedback</a></footer>
 <script>
 (function(){
+document.querySelector('.reading-tools').hidden=false;
 var article=document.querySelector('.reader-prose'),size=20;
+function save(){try{localStorage.setItem('wtlf-reading',JSON.stringify({size:size,night:document.body.classList.contains('night-reader')}))}catch(e){}}
 var down=document.getElementById('font-smaller'),up=document.getElementById('font-larger'),toggle=document.getElementById('theme-toggle');
-function change(delta){size=Math.max(17,Math.min(26,size+delta));article.style.setProperty('--reader-font',size+'px');down.disabled=size<=17;up.disabled=size>=26}
+function change(delta){size=Math.max(17,Math.min(26,size+delta));article.style.setProperty('--reader-font',size+'px');down.disabled=size<=17;up.disabled=size>=26;save();progress()}
 down.addEventListener('click',function(){change(-1)});
 up.addEventListener('click',function(){change(1)});
-toggle.addEventListener('click',function(){var night=document.body.classList.toggle('night-reader');toggle.setAttribute('aria-pressed',String(night));toggle.textContent=night?'Day mode':'Night mode'});
+toggle.addEventListener('click',function(){var night=document.body.classList.toggle('night-reader');toggle.setAttribute('aria-pressed',String(night));toggle.textContent=night?'Day mode':'Night mode';save()});
 function progress(){var top=article.getBoundingClientRect().top+window.scrollY,bottom=top+article.offsetHeight,range=Math.max(1,bottom-top-window.innerHeight),pct=Math.max(0,Math.min(100,(window.scrollY-top)/range*100));document.getElementById('progress-fill').style.width=pct+'%'}
+try{var stored=JSON.parse(localStorage.getItem('wtlf-reading'));if(stored){if(Number.isFinite(stored.size))size=stored.size;if(stored.night)toggle.click();change(0)}}catch(e){}
+window.addEventListener('load',progress);
 window.addEventListener('scroll',progress,{passive:true});window.addEventListener('resize',progress);progress();
 })();
 </script>

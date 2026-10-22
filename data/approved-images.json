@@ -5,90 +5,308 @@
     {
       "path": "assets/images/chapters/chapter-one-a-better-question.png",
       "scope": "scene",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 941,
+      "height": 1672
     },
     {
       "path": "assets/images/chapters/chapter-one-not-enough.png",
       "scope": "scene",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1024,
+      "height": 1536
     },
     {
       "path": "assets/images/chapters/chapter-one-well-the-knot-held.png",
       "scope": "scene",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 941,
+      "height": 1672
     },
     {
       "path": "assets/images/characters/bram.png",
       "scope": "character",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1086,
+      "height": 1448
     },
     {
       "path": "assets/images/characters/elias-varek.png",
       "scope": "character",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1024,
+      "height": 1536
     },
     {
       "path": "assets/images/characters/mira-varek.png",
       "scope": "character",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1024,
+      "height": 1536
     },
     {
       "path": "assets/images/characters/unnamed-workshop-figure.png",
       "scope": "character",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1024,
+      "height": 1536
     },
     {
       "path": "assets/images/districts/deepwater-working-waterfront.png",
       "scope": "environment",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1672,
+      "height": 941
     },
     {
       "path": "assets/images/districts/middle-heights-neighborhood.png",
       "scope": "environment",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1024,
+      "height": 1536
     },
     {
       "path": "assets/images/districts/upper-city-grand-reveal.png",
       "scope": "environment",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1672,
+      "height": 941
     },
     {
       "path": "assets/images/districts/upper-heights-to-upper-city.png",
       "scope": "environment",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1536,
+      "height": 1024
     },
     {
       "path": "assets/images/scenes/maren-inspects-cargo.png",
       "scope": "character",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1086,
+      "height": 1448
     },
     {
       "path": "assets/images/scenes/upper-city-everyday-life.png",
       "scope": "environment",
-      "approval": "creator-selected visual asset; incidental props are not novel canon"
+      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "width": 1672,
+      "height": 941
     },
     {
       "path": "assets/images/districts/middle-heights-establishing.png",
       "scope": "environment",
-      "approval": "creator-approved Middle Heights wide establishing illustration; visual geography only; incidental details not written canon"
+      "approval": "creator-approved Middle Heights wide establishing illustration; visual geography only; incidental details not written canon",
+      "width": 1672,
+      "height": 941
     },
     {
       "path": "assets/images/districts/upper-city-grand-reveal-home.webp",
       "scope": "optimized derivative",
       "source": "assets/images/districts/upper-city-grand-reveal.png",
-      "approval": "Uncropped, resized WebP of creator-approved artwork; no new visual content"
+      "approval": "Uncropped, resized WebP of creator-approved artwork; no new visual content",
+      "width": 1672,
+      "height": 941
     },
     {
       "path": "assets/images/districts/upper-city-grand-reveal-home-small.webp",
       "scope": "optimized derivative",
       "source": "assets/images/districts/upper-city-grand-reveal.png",
-      "approval": "Uncropped, resized WebP of creator-approved artwork; no new visual content"
+      "approval": "Uncropped, resized WebP of creator-approved artwork; no new visual content",
+      "width": 800,
+      "height": 450
     },
     {
       "path": "assets/images/characters/elias-varek-home.webp",
       "scope": "optimized derivative",
       "source": "assets/images/characters/elias-varek.png",
-      "approval": "Uncropped, resized WebP of creator-approved artwork; no new visual content"
+      "approval": "Uncropped, resized WebP of creator-approved artwork; no new visual content",
+      "width": 640,
+      "height": 960
+    },
+    {
+      "path": "assets/images/characters/bram-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/characters/bram.png",
+      "width": 1086,
+      "height": 1448,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/characters/bram-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/characters/bram.png",
+      "width": 640,
+      "height": 853,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/characters/elias-varek-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/characters/elias-varek.png",
+      "width": 1024,
+      "height": 1536,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/characters/elias-varek-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/characters/elias-varek.png",
+      "width": 640,
+      "height": 960,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/characters/mira-varek-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/characters/mira-varek.png",
+      "width": 1024,
+      "height": 1536,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/characters/mira-varek-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/characters/mira-varek.png",
+      "width": 640,
+      "height": 960,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/characters/unnamed-workshop-figure-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/characters/unnamed-workshop-figure.png",
+      "width": 1024,
+      "height": 1536,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/characters/unnamed-workshop-figure-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/characters/unnamed-workshop-figure.png",
+      "width": 640,
+      "height": 960,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/deepwater-working-waterfront-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/deepwater-working-waterfront.png",
+      "width": 1400,
+      "height": 788,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/deepwater-working-waterfront-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/deepwater-working-waterfront.png",
+      "width": 640,
+      "height": 360,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/middle-heights-neighborhood-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/middle-heights-neighborhood.png",
+      "width": 1024,
+      "height": 1536,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/middle-heights-neighborhood-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/middle-heights-neighborhood.png",
+      "width": 640,
+      "height": 960,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/upper-city-grand-reveal-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/upper-city-grand-reveal.png",
+      "width": 1400,
+      "height": 788,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/upper-city-grand-reveal-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/upper-city-grand-reveal.png",
+      "width": 640,
+      "height": 360,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/upper-heights-to-upper-city-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/upper-heights-to-upper-city.png",
+      "width": 1400,
+      "height": 933,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/upper-heights-to-upper-city-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/upper-heights-to-upper-city.png",
+      "width": 640,
+      "height": 427,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/scenes/maren-inspects-cargo-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/scenes/maren-inspects-cargo.png",
+      "width": 1086,
+      "height": 1448,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/scenes/maren-inspects-cargo-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/scenes/maren-inspects-cargo.png",
+      "width": 640,
+      "height": 853,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/scenes/upper-city-everyday-life-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/scenes/upper-city-everyday-life.png",
+      "width": 1400,
+      "height": 788,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/scenes/upper-city-everyday-life-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/scenes/upper-city-everyday-life.png",
+      "width": 640,
+      "height": 360,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/middle-heights-establishing-web.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/middle-heights-establishing.png",
+      "width": 1400,
+      "height": 788,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/middle-heights-establishing-small.webp",
+      "scope": "optimized derivative",
+      "source": "assets/images/districts/middle-heights-establishing.png",
+      "width": 640,
+      "height": 360,
+      "approval": "Uncropped delivery copy of approved original; no new artwork"
+    },
+    {
+      "path": "assets/images/districts/novel-social.webp",
+      "scope": "social preview",
+      "source": "assets/images/districts/upper-city-grand-reveal.png",
+      "width": 1200,
+      "height": 630,
+      "approval": "Full approved city composition with title and author typography; no new artwork"
     }
   ]
 }

@@ -39,6 +39,12 @@ Old artwork must not be placed on the live site merely because it remains in Git
 
 The `-home.webp` and `-home-small.webp` files are uncropped delivery copies of the approved Upper City Grand Reveal and Elias portrait, not new artwork. Their manifest entries identify the approved PNG source. The city variants are 1672 and 800 pixels wide; Elias is 640 pixels wide. They retain the full composition and use WebP quality 85. Original PNGs and Chapter One illustrations remain unchanged. The allowlisted copy pipeline validates both PNG and WebP paths and requires derivative source entries to reference approved originals.
 
+## Site-wide delivery variants (22 Oct 2026)
+
+The `-web.webp` and `-small.webp` files retain the full approved source composition. They use WebP quality 83, with a maximum width of 1400 or 640 pixels and a maximum height of 1600 pixels, without upscaling. Manifest records include original source paths and actual dimensions. Static pages select these variants through responsive image tags; the three Chapter One illustrations continue using their original PNGs, unchanged and uncropped.
+
+`districts/novel-social.webp` is a 1200 × 630 social preview containing the full approved Upper City Grand Reveal composition, the novel title, genre and author name on a dark background. It introduces no new scene content. Its approved source is recorded in the manifest.
+
 ## Middle Heights establishing landscape (22 Oct 2026)
 
 Creator-approved image `Lanternlit City of the Misty Gorge.png` is published as `assets/images/districts/middle-heights-establishing.png` for the main World atlas Middle Heights section. The earlier approved portrait image remains in `assets/images/districts/middle-heights-neighborhood.png` as a supporting illustration, but not the main World establishing view. The new scene represents a visually approved cross-canyon residential setting; no incidental banners, lights, bridge designs or individual buildings are written canon.

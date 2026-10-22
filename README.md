@@ -33,11 +33,11 @@ The author has explicitly approved Chapter One for public sharing; further revis
 
 ## Reader-feedback limitations
 
-The available feedback method is a public GitHub issue, which requires sign-in. The site does **not** currently collect anonymous submissions or personal data through its own backend. Visitors are informed that comments are public and may contain Chapter One spoilers.
+Reader feedback goes to the author-approved public address roubos@proton.me. The optional draft helper opens the reader's email app; it does not send or store messages. A direct email link works without JavaScript. GitHub is an optional public discussion, and spoiler-containing prompts are collapsed. No newsletter service is connected; chapter-update enquiries use email.
 
 ## Local preview
 
-From this repository's root run `python -m http.server 8000` and visit `http://localhost:8000/` and `http://localhost:8000/chapter-one.html`.
+From this repository's root run `node scripts/build-local.js`, then serve `_site/` with a local static server (for example, `python -m http.server 8000 --directory _site`). The build audits all pages, approved responsive images, links, social previews and manuscript paragraphs. Test the generated output rather than the application source alone.
 
 ## Artwork organization
 
@@ -53,3 +53,7 @@ The workflow copies only `assets/images/` into the output. It also builds crawla
 ## Outstanding optional illustrations
 
 An Arch coin close-up, interiors and smaller environmental details may add variety later. Only publish these after visual approval and a public-spoiler check.
+
+## Reader features
+
+All pages share accessible desktop/mobile navigation, a contact link and a common footer. Lore search progressively filters the static archive; the full archive remains readable without JavaScript. Chapter font size and night mode are saved locally when browser storage is available. Legacy hash routes redirect to their static equivalents. World jump links, character profiles, Start Here and Chronology retain their existing routes. Every public page uses the approved 1200 × 630 social preview.
