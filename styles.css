@@ -593,6 +593,9 @@ main>.shell.section>.title{max-width:850px;letter-spacing:-.035em;text-wrap:bala
 }
 @media print{.header,.mobile-nav,.chapter-next{display:none!important}}
 .feedback-layout{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start}
+.feedback-send-actions{display:flex;flex-wrap:wrap;gap:12px;margin:20px 0}
+#feedback-provider{width:100%;padding:12px;background:#10191d;color:#eee6d6;border:1px solid #bfa782;font:16px/1.6 system-ui}
+#feedback-provider:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
 .character-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:800px){.feedback-layout{grid-template-columns:1fr}.character-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:560px){.character-gallery{grid-template-columns:1fr}.character-card .character-image{height:auto;max-height:480px;width:100%;object-fit:contain}.character-card-copy{padding:24px}}

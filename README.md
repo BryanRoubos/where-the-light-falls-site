@@ -33,7 +33,11 @@ The author has explicitly approved Chapter One for public sharing; further revis
 
 ## Reader-feedback limitations
 
-Reader feedback goes to the author-approved public address roubos@proton.me. The optional draft helper opens the reader's email app; it does not send or store messages. A direct email link works without JavaScript. GitHub is an optional public discussion, and spoiler-containing prompts are collapsed. No newsletter service is connected; chapter-update enquiries use email.
+Reader feedback goes to the author-approved public address roubos@proton.me. Readers can write on the page and continue to a Gmail or Outlook browser draft, copy their message for Proton or other webmail, or choose an email app. Nothing is automatically sent or stored by the site. Direct browser-compose and email links work without JavaScript. GitHub remains optional. Chapter One prompts open by default and can be collapsed with their disclosure toggle. No newsletter service is connected; chapter-update enquiries use email.
+
+## Search Console sitemap submission
+
+The sitemap is at **https://bryanroubos.github.io/where-the-light-falls-site/sitemap.xml**, not `https://bryanroubos.github.io/sitemap.xml` (the latter returns 404). For the URL-prefix property `https://bryanroubos.github.io/where-the-light-falls-site/`, enter `sitemap.xml` in the submission field. For a property rooted at `https://bryanroubos.github.io/`, enter `where-the-light-falls-site/sitemap.xml`. Confirm the full URL shown in the submitted sitemap details. The deployed XML contains 28 public pages and is also referenced by the project-level robots.txt. A publicly accessible sitemap does not itself confirm Google's fetch or indexing; use Search Console's live URL test and resubmit the correct address when necessary.
 
 ## Local preview
 

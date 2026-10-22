@@ -17,6 +17,12 @@ for(const file of files){
  }
 }
 const chapter=fs.readFileSync(root+'/chapter-one.html','utf8');
+const feedback=fs.readFileSync(root+'/feedback.html','utf8');
+assert.ok(feedback.includes('<details open><summary>Chapter One discussion prompts'));
+assert.ok(feedback.includes('id="feedback-provider"'));
+assert.ok(feedback.includes('https://mail.google.com/mail/'));
+assert.ok(feedback.includes('https://outlook.live.com/mail/0/deeplink/compose'));
+assert.ok(feedback.includes('id="feedback-copy"'));
 assert.ok(chapter.includes('href="world.html" class="btn"'));
 assert.ok(chapter.includes('href="lore/mira.html"'));
 // Every approved manuscript paragraph remains in order, excluding chapter headings.
