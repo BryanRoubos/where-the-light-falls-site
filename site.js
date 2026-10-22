@@ -41,6 +41,7 @@ if(draft){
  const proceed=document.getElementById('feedback-continue');
  provider.addEventListener('change',()=>{
   proceed.textContent=({gmail:'Continue to Gmail ↗',outlook:'Continue to Outlook ↗',copy:'Copy message',app:'Open email app →'})[provider.value];
+  document.getElementById('feedback-copy').hidden=provider.value==='copy';
   status.textContent='';
  });
  function messageBody(){
@@ -69,5 +70,37 @@ if(draft){
   for(const [key,value] of Object.entries(fields))url.searchParams.set(key,value);
   window.open(url.href,'_blank','noopener,noreferrer');
   status.textContent='Continue in the new browser tab to review and send. If it did not open, allow the new tab or use Copy message.';
+ });
+}
+const feedbackForm=document.querySelector('[data-direct-feedback]');
+if(feedbackForm){
+ const submit=feedbackForm.querySelector('button[type="submit"]');
+ const status=document.getElementById('feedback-send-status');
+ let sending=false;
+ feedbackForm.addEventListener('submit',async event=>{
+  event.preventDefault();
+  if(sending||!feedbackForm.reportValidity())return;
+  const message=feedbackForm.elements.message;
+  if(!message.value.trim()){status.textContent='Please add a few words before sending.';message.focus();return;}
+  if(feedbackForm.elements._honey.value)return;
+  sending=true;submit.disabled=true;submit.textContent='Sending…';feedbackForm.setAttribute('aria-busy','true');status.textContent='Sending your feedback…';
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),20000);
+  try{
+   const data=new FormData(feedbackForm);
+   if(!String(data.get('email')||'').trim())data.delete('email');
+   const response=await fetch(feedbackForm.dataset.ajaxEndpoint,{method:'POST',body:data,headers:{Accept:'application/json'},signal:controller.signal});
+   const result=await response.json();
+   if(!response.ok||!([true,'true'].includes(result.success))||/activat|confirm your email/i.test(String(result.message||'')))throw Error('Submission was not accepted');
+   status.textContent='Thank you — your feedback has been submitted to Bryan.';
+   feedbackForm.reset();
+  }catch(error){
+   status.textContent='We could not confirm that your feedback was sent. Your words are still here. Try again, or use the email options below.';
+   document.getElementById('reader-message').value=message.value;
+   document.getElementById('reader-name').value=feedbackForm.elements.name.value;
+   const fallback=document.getElementById('feedback-email-options');if(fallback)fallback.open=true;
+  }finally{
+   clearTimeout(timeout);sending=false;submit.disabled=false;submit.textContent='Send feedback →';feedbackForm.removeAttribute('aria-busy');
+  }
  });
 }

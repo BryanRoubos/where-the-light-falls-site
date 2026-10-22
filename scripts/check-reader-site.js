@@ -23,6 +23,16 @@ assert.ok(feedback.includes('id="feedback-provider"'));
 assert.ok(feedback.includes('https://mail.google.com/mail/'));
 assert.ok(feedback.includes('https://outlook.live.com/mail/0/deeplink/compose'));
 assert.ok(feedback.includes('id="feedback-copy"'));
+const direct=JSON.parse(fs.readFileSync('data/feedback.json','utf8')).enabled||process.env.FEEDBACK_PREVIEW==='1';
+if(direct){
+ assert.ok(feedback.includes('id="feedback-send"'));
+ assert.ok(feedback.includes('action="https://formsubmit.co/roubos@proton.me" method="POST"'));
+ assert.ok(feedback.includes('id="feedback-email" name="email" type="email"'));
+ assert.ok(feedback.includes('name="_honey"'));
+ assert.ok(!feedback.includes('name="_captcha" value="false"'));
+ assert.ok(feedback.includes('feedback-thanks.html'));
+ assert.ok(!fs.readFileSync(root+'/sitemap.xml','utf8').includes('feedback-thanks.html'));
+}
 assert.ok(chapter.includes('href="world.html" class="btn"'));
 assert.ok(chapter.includes('href="lore/mira.html"'));
 // Every approved manuscript paragraph remains in order, excluding chapter headings.

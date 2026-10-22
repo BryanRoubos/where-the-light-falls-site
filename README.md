@@ -33,7 +33,11 @@ The author has explicitly approved Chapter One for public sharing; further revis
 
 ## Reader-feedback limitations
 
-Reader feedback goes to the author-approved public address roubos@proton.me. Readers can write on the page and continue to a Gmail or Outlook browser draft, copy their message for Proton or other webmail, or choose an email app. Nothing is automatically sent or stored by the site. Direct browser-compose and email links work without JavaScript. GitHub remains optional. Chapter One prompts open by default and can be collapsed with their disclosure toggle. No newsletter service is connected; chapter-update enquiries use email.
+Reader feedback goes to the author-approved public address roubos@proton.me through the activated FormSubmit integration. The form requests a message; name and reply email are optional. JavaScript submits on the page, preserves text on failure, prevents duplicate in-flight requests, and shows success only when the service accepts the submission. Without JavaScript, a standard POST uses the provider's normal verification flow and returns to `feedback-thanks.html`, which is excluded from the sitemap and marked noindex. Provider captcha protection is not explicitly disabled; a honeypot provides additional filtering. FormSubmit processes the supplied fields and retains submissions for 30 days, as disclosed beside the form.
+
+`data/feedback.json` controls whether the direct form is available. Set `enabled` to false to keep browser-email fallback available while disabling direct submission. For local review only, `FEEDBACK_PREVIEW=1` includes the form even when disabled. Activation and a service delivery test must pass before enabling a new recipient. Never deploy a form as working based only on a mocked success response.
+
+Readers can also expand the email fallback to create a Gmail or Outlook browser draft, copy their message for Proton or other webmail, or choose an email app. The copy option shows only one Copy message button. Direct browser-compose and email links work without JavaScript. GitHub remains optional. Chapter One prompts open by default and can be collapsed. No newsletter service is connected; chapter-update enquiries use email.
 
 ## Search Console sitemap submission
 

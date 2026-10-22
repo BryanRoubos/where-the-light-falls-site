@@ -39,6 +39,6 @@ for(const p of ['index.html','world.html','characters.html','lore.html','lore/un
  if(!fs.existsSync(path.join(root,p)))errors.push('missing output '+p);
 }
 const map=fs.readFileSync(path.join(root,'sitemap.xml'),'utf8');
-for(const f of htmlFiles){const rel=path.relative(root,f).replaceAll(path.sep,'/');const uri=localBase+(rel==='index.html'?'':rel);if(!map.includes('<loc>'+uri+'</loc>'))errors.push('sitemap missing '+rel);}
+for(const f of htmlFiles){const rel=path.relative(root,f).replaceAll(path.sep,'/');const uri=localBase+(rel==='index.html'?'':rel);const noindex=/<meta name="robots" content="noindex,follow">/.test(fs.readFileSync(f,'utf8'));if(!noindex&&!map.includes('<loc>'+uri+'</loc>'))errors.push('sitemap missing '+rel);if(noindex&&map.includes('<loc>'+uri+'</loc>'))errors.push('noindex page in sitemap '+rel);}
 if(errors.length){console.error(errors.join('\n'));process.exitCode=1;}
 else console.log('Site audit passed: '+htmlFiles.length+' HTML pages, internal links, images, canonicals and sitemap.');
