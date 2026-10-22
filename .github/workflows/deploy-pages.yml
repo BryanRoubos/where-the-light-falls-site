@@ -31,7 +31,7 @@ jobs:
           node --check site.js
           grep -q 'chapter-one.html' index.html
           grep -q 'reader-prose' chapter-one.html
-          grep -q 'issues/1' feedback.html
+          grep -q 'DIRECT_FEEDBACK' feedback.html
       - name: Build spoiler-safe allowlisted site
         shell: bash
         run: |

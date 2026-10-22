@@ -7,7 +7,7 @@ for(const file of files){
  const html=fs.readFileSync(path.join(root,file),'utf8');
  assert.equal((html.match(/<h1\b/g)||[]).length,1,file+': one main title');
  assert.equal((html.match(/<header\b/g)||[]).length,1,file+': one shared header');
- assert.ok(html.includes('class="mobile-nav"')&&html.includes('mailto:roubos@proton.me'),file+': navigation/contact');
+ assert.ok(html.includes('class="mobile-nav"')&&html.includes('href="feedback.html"'),file+': navigation/contact');
  assert.ok(html.includes('novel-social.webp'),file+': social preview');
  for(const img of html.matchAll(/<img\b[^>]*>/g)){
   const tag=img[0],src=tag.match(/src="([^"]+)"/)[1];
@@ -19,10 +19,8 @@ for(const file of files){
 const chapter=fs.readFileSync(root+'/chapter-one.html','utf8');
 const feedback=fs.readFileSync(root+'/feedback.html','utf8');
 assert.ok(feedback.includes('<details open><summary>Chapter One discussion prompts'));
-assert.ok(feedback.includes('id="feedback-provider"'));
-assert.ok(feedback.includes('https://mail.google.com/mail/'));
-assert.ok(feedback.includes('https://outlook.live.com/mail/0/deeplink/compose'));
-assert.ok(feedback.includes('id="feedback-copy"'));
+assert.ok(!/feedback-provider|feedback-copy|feedback-draft|feedback-email-options|mail.google.com|outlook.live.com/.test(feedback));
+assert.ok(feedback.indexOf('id="feedback-send"')<feedback.indexOf('class="feedback-panel"'));
 const direct=JSON.parse(fs.readFileSync('data/feedback.json','utf8')).enabled||process.env.FEEDBACK_PREVIEW==='1';
 if(direct){
  assert.ok(feedback.includes('id="feedback-send"'));
@@ -35,6 +33,9 @@ if(direct){
 }
 assert.ok(chapter.includes('href="world.html" class="btn"'));
 assert.ok(chapter.includes('href="lore/mira.html"'));
+const lore=fs.readFileSync(root+'/lore.html','utf8');
+assert.ok(lore.includes('id="archive-clear"')&&lore.includes('data-search='));
+assert.ok(fs.readFileSync(root+'/world.html','utf8').includes('id="city-levels"'));
 // Every approved manuscript paragraph remains in order, excluding chapter headings.
 const manuscript=fs.readFileSync('chapters/chapter-one.md','utf8');
 const paragraphs=manuscript.split(/\r?\n\s*\r?\n/).filter(p=>p.trim()&&!p.startsWith('#')&&!/^\s*\*\s*\*\s*\*/.test(p));
