@@ -54,7 +54,7 @@
     {
       "path": "assets/images/districts/deepwater-working-waterfront.png",
       "scope": "environment",
-      "approval": "creator-selected visual asset; incidental props are not novel canon",
+      "approval": "Creator explicitly selected 'Deepwater Canyon Harbor.png' as replacement Deepwater World and Lore illustration on 24 October 2026; visual environment only; incidental details not written canon",
       "width": 1672,
       "height": 941
     },
@@ -186,22 +186,6 @@
       "source": "assets/images/characters/unnamed-workshop-figure.png",
       "width": 640,
       "height": 960,
-      "approval": "Uncropped delivery copy of approved original; no new artwork"
-    },
-    {
-      "path": "assets/images/districts/deepwater-working-waterfront-web.webp",
-      "scope": "optimized derivative",
-      "source": "assets/images/districts/deepwater-working-waterfront.png",
-      "width": 1400,
-      "height": 788,
-      "approval": "Uncropped delivery copy of approved original; no new artwork"
-    },
-    {
-      "path": "assets/images/districts/deepwater-working-waterfront-small.webp",
-      "scope": "optimized derivative",
-      "source": "assets/images/districts/deepwater-working-waterfront.png",
-      "width": 640,
-      "height": 360,
       "approval": "Uncropped delivery copy of approved original; no new artwork"
     },
     {

@@ -17,7 +17,7 @@ Still potentially useful: a small approved Arch coin detail, a quiet Upper City 
 
 Only the nine newly selected world/character/scenes, other separately selected character artwork, and the three Chapter One illustrations are intended for public display. Earlier homepage artwork is archived; historical approval does not override the current visual selection.
 
-Current Deepwater homepage image: `assets/images/districts/deepwater-working-waterfront.png` (original title: `Mistbound Cliffside Harbour.png`).
+Current approved Deepwater World/Lore image: `assets/images/districts/deepwater-working-waterfront.png` (uploaded title: `Deepwater Canyon Harbor.png`, replacing `Mistbound Cliffside Harbour.png` on 24 October 2026). The old webp derivatives were removed because they depict the retired artwork; no unapproved old image should be delivered. The public image does not establish incidental architecture as written canon.
 
 World is the illustrated atlas; Lore is text-forward, with selective use of relevant illustrations. No illustration automatically establishes incidental props or specific historical events as written canon.
 
